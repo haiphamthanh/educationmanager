@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="eHg-YL-iCf">
+            <objects>
+                <viewController storyboardIdentifier="IntroViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xGk-HY-lMd" customClass="IntroViewController" customModule="ASHManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZKQ-aA-ryx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odv-GJ-It6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="613"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7zE-tP-wUP">
+                                <rect key="frame" x="0.0" y="613" width="375" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laA-q8-WiQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="54"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Register"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StI-6X-uvb">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="54"/>
+                                        <color key="backgroundColor" red="0.68743928109999997" green="0.68743928109999997" blue="0.68743928109999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="odv-GJ-It6" firstAttribute="leading" secondItem="FPN-iq-aEZ" secondAttribute="leading" id="ESc-I6-xAR"/>
+                            <constraint firstItem="odv-GJ-It6" firstAttribute="top" secondItem="ZKQ-aA-ryx" secondAttribute="top" id="GRr-Xv-Euh"/>
+                            <constraint firstItem="7zE-tP-wUP" firstAttribute="leading" secondItem="FPN-iq-aEZ" secondAttribute="leading" id="Qgx-Ni-2Kn"/>
+                            <constraint firstItem="7zE-tP-wUP" firstAttribute="top" secondItem="odv-GJ-It6" secondAttribute="bottom" id="VJ7-Mb-YA3"/>
+                            <constraint firstItem="7zE-tP-wUP" firstAttribute="bottom" secondItem="ZKQ-aA-ryx" secondAttribute="bottom" id="Y8W-Re-gTJ"/>
+                            <constraint firstItem="FPN-iq-aEZ" firstAttribute="trailing" secondItem="odv-GJ-It6" secondAttribute="trailing" id="aav-KP-FmS"/>
+                            <constraint firstItem="FPN-iq-aEZ" firstAttribute="trailing" secondItem="7zE-tP-wUP" secondAttribute="trailing" id="hBH-Ih-Ovf"/>
+                            <constraint firstItem="7zE-tP-wUP" firstAttribute="height" secondItem="FPN-iq-aEZ" secondAttribute="height" multiplier="1:12" id="n7A-1s-iqy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FPN-iq-aEZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="StI-6X-uvb" id="wQd-ga-rCh"/>
+                        <outlet property="presentView" destination="odv-GJ-It6" id="o8R-6n-PRI"/>
+                        <outlet property="registerButton" destination="laA-q8-WiQ" id="hnd-Qg-caB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eft-5B-pev" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,42 @@
+/*
+ NormalLocalizable.strings
+ ASHManager
+ 
+ Created by HaiPT15 on 12/13/17.
+ Copyright © 2017 Asahi. All rights reserved.
+ */
+
+// MARK: - ================================= View title =================================
+"Title_Home" = "Trang chủ";
+"Title_Marked_Place" = "Địa điểm đã đánh dấu";
+"Title_Local_Sharing" = "Vị trí đã share";
+"Title_Offline_Map" = "Bản đồ offline";
+"Title_Plan" = "Danh sách kế hoạch";
+"Title_Your_Trip" = "Lịch sử chuyến đi";
+"Title_Setting" = "Cài đặt";
+"Title_Help_Feedback" = "Trợ giúp & phản hồi";
+"Title_Term_Of_Service" = "Điều khoản dịch vụ";
+"Title_Reset_Pass" = "パスワードのリセット";
+
+// MARK: - ================================= IntroView =================================
+"IntroView.Title.Lable" = "GENKIMIRU";
+"IntroView.Title.headingLable" = "FIND YOUR BALANCE";
+"IntroView.Content.Lable" = "毎日40分運動することで得ら れる効果は健康寿命促進にあた って非常に重要です。GENKI-MIRUで継続的に運動して健康 管理を万全に。";
+"IntroView.Button.Register" = "登録する";
+"IntroView.Button.Login" = "ログイン";
+
+// MARK: - ================================= Reset Pass =================================
+"ResetPass.Title.Lable" = "パスワードを忘れた場合";
+"ResetPass.Content.Lable" = "次の情報を入力すると、パスワードの変更方法について GENKIMIRUからメールが送信されます。";
+"ResetPass.PlaceHoderTextFeild" = "Emailを入力して下さい";
+"ResetPass.SendButton.Title" = "送る";
+
+// MARK: - ================================= Register =================================
+"Register.Beer.NaviTitle" = "健康情報";
+"Register.Beer.Title.Label" = "どのくらいの頻度で飲むのですか?";
+"Register.Smoke.NaviTitle" = "健康情報";
+"Register.Smoke.Title.Label" = "どのくらいの頻度で喫煙しますか?";
+"Register.Beer.CheckBoxTitle1.Label" = "好きではない";
+"Register.Beer.CheckBoxTitle2.Label" = "あまりない";
+"Register.Beer.CheckBoxTitle3.Label" = "定期的に";
+"Register.Beer.CheckBoxTitle4.Label" = "重い中毒";

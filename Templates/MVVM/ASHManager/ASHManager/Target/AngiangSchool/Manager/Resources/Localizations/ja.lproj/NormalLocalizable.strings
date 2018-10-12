@@ -1,0 +1,549 @@
+/*
+ NormalLocalizable.strings
+ ASHManager
+ 
+ Created by HaiPT15 on 12/13/17.
+ Copyright © 2017 Asahi. All rights reserved.
+ */
+
+// MARK: - -------------------------------- HOME --------------------------------
+"Title_Home" = "ホーム";
+// MARK: - -------------------------------- Google MAP --------------------------------
+"Title_Text_Place_Holder" = "住所をここに入力してください。";
+"Title_Current_Location" = "現在のロケーション";
+// MARK: - -------------------------------- Authentication ----------------------------
+"Title_Login" = "ログイン";
+"Title_Facebook_Login" = "Facebookでログイン";
+"Title_Google_Login" = "Googleでログイン";
+"Title_Agree_Term_Of_Use" = "%@と%@に同意してログイン";
+"Title_Policy" = "個人保護方針";
+"Title_Terms" = "利用規約";
+"Title_Input_Username" = "ユーザー名";
+"Title_Input_Username_Or_Email" = "メールアドレス、またはユーザー名";
+"Title_input_password" = "パスワード";
+"Title_Send_Email" = "次の情報を入力すると、パスワードの変更方法について\nGENKIMIRUからメールが送信されます。";
+"Title_Input_Email" = "Emailを入力して下さい";
+"Title_Send" = "送る";
+"Title_Terms_Of_Use" = "利用規約";
+"Title_Privacy_Policy" = "プライバシーポリシー";
+"Title_Reset_Pass" = "パスワードのリセット";
+"Title_Forgot_Pass" = "パスワードをお忘れの⽅";
+
+// MARK: - -------------------------------- Health Information --------------------------------
+"Title_Health_Information" = "健康情報";
+"Title_Register_User_Infomation" = "登録する";
+"Title_Infomation_Year" = "年";
+"Title_Infomation_Month" = "月";
+"Title_Infomation_Day" = "日";
+"Title_Health_Information_Birthday" = "";
+"year_month_date_format" = "yyyy'年' MM'月' dd'日'";
+"year_month_date_contest_format" = "yyyy'年'MM'月'dd'日'";
+"year_month_date_time_format" = "yyyy'年' MM'月' dd'日', a HH:mm";
+"year_month_date_time_formatV2" = "yyyy年MM月dd日 HH:mm:ss";
+"cal_e_y_M_d_format" = "EEEE, yyyy年 MM月 dd日";
+"cal_y_M_d_format" = "yyyy年 MM月 dd日";
+"cal_y_m_format" = "yyyy年 MM月";
+
+// MARK: - -------------------------------- IntroView --------------------------------
+"IntroView.Title.Lable" = "GENKIMIRU";
+"IntroView.Title.headingLable" = "FIND YOUR BALANCE";
+"IntroView.Content.Lable" = "毎日40分運動することで得ら れる効果は健康寿命促進にあた って非常に重要です。GENKI-MIRUで継続的に運動して健康 管理を万全に。";
+"IntroView.Content.Lable1" = "初月無料サービスになります。簡単な登録で、スマホやウェアラブルからのログから日々の健康管理アドバイスをご提供します。 ";
+"IntroView.Content.Lable2" = "ダイエットするには欠かせない食事制限ですが、Genkimiru では新鮮な野菜や果物 、全粒穀物 、ナッツ類 、豆類 、オメガ ３脂肪酸などで構成されるいわゆるホ ールフ ードの食事中心のダイエットをオススメします。 ";
+"IntroView.Content.Lable3" = "Genkimiru では健康的なダイエットをオススメする為、睡眠についても質と効率についてしっかりと管理します。睡眠は人間の行うもっとも回復力の高い活動だからです。 ";
+"IntroView.Content.Lable4" = "Genkimiru はダイエットに関するご質問や使い方等にはWatson アシスタントが24時間365日すぐにお答えします。";
+"IntroView.Content.Lable5" = "EdyがもらえるGENKIMIRUのウオーキングチャレンジに定期的に参加して楽しく健康になりましょう。初めてみませんか？Genkimiru で健康寿命を延ばす為にダイエットを。";
+"IntroView.Button.Register" = "登録する";
+"IntroView.Button.Login" = "ログイン";
+
+// MARK: - -------------------------------- Reset Pass --------------------------------
+"ResetPass.Title.Lable" = "ご本⼈であることを確認するために、現在登録されているメールアドレスを⼊⼒し「送信する」ボタンを押してください。";
+"ResetPass.Content.Lable" = "ご登録いただいているメールアドレスにパスワード再設定⼿続きのメールをお送りします。";
+"ResetPass.PlaceHoderTextFeild" = "メールアドレス";
+"ResetPass.SendButton.Title" = "送信する";
+"Title_Forgot_Password" = "パスワードを再設定する";
+"Title_Forgot_Password_Message" = "指定のメ⼀ルアドレスにメールを送信 いたしました。 メールの受信ボツクス を確認してください。";
+"PinCode.Text" = "PIN コード";
+"Password.Text" = "新しいパスワード";
+"Confirm.Password.Text" = "新しいパスワード (確認⽤)";
+"Change.Button.Text" = "送信する";
+"OldPassword.Text" = "これまでのパスワード";
+"Title_Change_Password" = "パスワードを変更する";
+"ChangePassword.Button.Text" = "パスワードを変更する";
+
+// MARK: - -------------------------------- Register --------------------------------
+"Register.Beer.NaviTitle" = "健康情報";
+"Register.Beer.Title.Label" = "どのくらいの頻度で飲むのですか?";
+"Register.Smoke.NaviTitle" = "健康情報";
+"Register.Smoke.Title.Label" = "どのくらいの頻度で喫煙しますか?";
+"Register.Beer.CheckBoxTitle1.Label" = "好きではない";
+"Register.Beer.CheckBoxTitle2.Label" = "あまりない";
+"Register.Beer.CheckBoxTitle3.Label" = "定期的に";
+"Register.Beer.CheckBoxTitle4.Label" = "重い中毒";
+"Register.Button.Next" = "次へ";
+"Register.Button.SkipAll" = "すべてスキップ";
+"Register.Button.Register" = "確認する";
+"Title_BirthDay" = "⽣年⽉⽇ :";
+"Title_Device" = "ウェアラブルデバイスやアプリをお持ちですか︖";
+"Title_Device_Description" = "⼀部の情報は、同期すると⾃動⼊⼒されます。";
+"Title_Other_Wearable_Button" = "その他ウェアラブル";
+"Title_Smart_Phone_Button" = "スマートフォン";
+"Title_Gobe" = "GoBe";
+"Title_Fitbit" = "fitbit";
+"Title_Weight" = "体重 :";
+
+"Popup_Name" = "GOBEアカウントを⼊⼒してください。";
+"Nike_Button" = "Nike+ FuelBand SE";
+"Acer_Liquid_Leap" = "Acer Liquid Leap+";
+"Xiaomi" = "Xiaomi Mi Band 1S";
+"Note" = "※ Apple healthkitとデータを同期してください。";
+"Gender" = "性別を選択";
+"Height" = "⾝⻑ :";
+"Blood_Type" = "⾎液型 :";
+"Blood_Pressure" = "⾎圧 :";
+"Text_Question" = "お酒をのみますか?";
+"CheckBox1" = "毎⽇飲む";
+"CheckBox2" = "週5〜6⽇";
+"CheckBox3" = "週3〜4⽇";
+"CheckBox4" = "週1〜2⽇";
+"CheckBox5" = "⽉に1〜3⽇";
+"CheckBox6" = "やめた（1年以上やめている）";
+"CheckBox7" = "ほとんど飲まない（飲めない）";
+"Drink_Text_Question" = "⼀回にどれぐらい飲みますか︖";
+"Drink_Popup_CheckBox1" = "1合（180ml）未満";
+"Drink_Popup_CheckBox2" = "1合以上2合（360ml）未満";
+"Drink_Popup_CheckBox3" = "2合以上3合（540ml）未満";
+"Drink_Popup_CheckBox4" = "3合以上4合（720ml）未満";
+"Drink_Popup_CheckBox5" = "4合以上5合（900ml）未満";
+"Drink_Popup_CheckBox6" = "5合以上（900ml）以上";
+
+"Smoke_Text_Question" = "タバコを吸いますか︖";
+"Smoke_Checkbox1" = "全く吸わない";
+"Smoke_Checkbox2" = "お酒を飲むときなどにたまに吸う";
+"Smoke_Checkbox3" = "毎⽇吸う";
+
+"Smoke_Popup_Text_Question" = "⼀⽇に何本タバコを吸いますか︖";
+"Smoke_Popup_Checkbox1" = "1~10本程度";
+"Smoke_Popup_Checkbox2" = "11~20本程度";
+"Smoke_Popup_Checkbox3" = "21本以上";
+
+"Surgery_Text_Question" = "重い病気ないしは⼤きな⼿術をしたことがありますか︖";
+"Surgery_Text_Answer_Yes" = "重い病気ないしは⼤きな⼿術をしたことがあります";
+"Surgery_Text_Answer_No" = "重い病気ないしは⼤きな⼿術をしたことがありません";
+"Yes" = "はい";
+"No" = "いいえ";
+
+"Health_Text_Question" = "現在の健康状態はどうですか︖";
+"Health_Checkbox1" = "とても良い";
+"Health_Checkbox2" = "良い";
+"Health_Checkbox3" = "悪くない";
+"Health_Checkbox4" = "悪い";
+
+"Health_VeryGood" = "現在の健康状態がとても良い";
+"Health_Good" = "現在の健康状態が良い";
+"Health_Notbad" = "現在の健康状態が悪くない";
+"Health_Bad" = "現在の健康状態が悪い";
+
+"Nickname_Text_Question" = "いろいろな特典がもらえるコンテスト参加⽤のニックネームは何がいいですか︖";
+"Nick_Name" = "ニックネーム";
+
+"Avatar_Text_Choose_Pic" = "プロフィールの写真を選んでください ";
+"Avatar_Text_Take_Pic" = "写真を撮る";
+"Avatar_Text_Select_Pic" = "写真を選択";
+
+"Create_Account_Text" = "アカウント作成";
+"Agreement_Text" = "個⼈保護⽅針と利⽤規約に同意してログイン";
+"Placeholder_UserName" = "ユーザー名";
+"Placeholder_Mail" = "メールアドレス";
+"Placeholder_Password" = "パスワード";
+"Placeholder_FirstName" = "名";
+"Placeholder_LastName" = "姓";
+"Note_Create_Account" = "※ 外国名をお持ちの⽅は,半⾓ローマ字でご⼊⼒ください";
+
+"Register_Text_Noti" = "”登録する”ボタンを押して登録を完了してください";
+
+"Finish_Noti" = "有難うございます。\n登録完了しました︕\nダッシュボードへ移動します";
+"Title_This_Month" = "(今⽉)";
+"Title_Money" = "円";
+
+"Title_Name_Of_Food" = "食品名";
+"Title_Protein" = "タンパク質";
+"Title_Fat" = "脂質";
+"Title_Carbonhidrate" = "炭水化物";
+"Title_Calories" = "摂取カロリー";
+"Title_Record" = "記録";
+"Title_Add_Food" = "食品記録";
+"Title_Calories_IN" = "摂取カロリー";
+"Title_Calories_OUT" = "消費カロリー";
+"Title_Attachment" = "添付ファイル";
+"Title_Search" = "検索";
+"Title_Language" = "ja";
+
+// MARK: - -------------------------------- Paid Plan --------------------------------
+"Paid_Plan_Navi_Title" = "課金プラン選択";
+"Paid_Plan_Header_Title_Label" = "Please Select a paid plan";
+"Paid_Plan_Selected_Pay_Title" = "You're using trial package:";
+"Paid_Plan_Selected_Pay_Default_Title" = "使用中の課金プラン";
+"Paid_Plan_Option_Pay_Title" = "自分にあった課金プランを選択してください。";
+"Paid_Plan_Option_Pay_Default_Title" = "使用期限を延長する場合、下記の課金プランを選択してください。";
+"Paid_Plan_Expire" = "%@日に自動更新。";
+"Paid_Plan_Date_Format" = "yyyy月MM月dd";
+"Paid_Plan_Detail_Navi_Title" = "パケットの詳細";
+"Paid_Plan_Days_Remain" = "残り日数";
+"Paid_Plan_Button_Buy" = "支払い";
+"Paid_Plan_Button_Change" = "変更";
+
+// MARK: - -------------------------------- Setting --------------------------------
+"Setting_Tittle" = "プロフィール変更";
+"Setting_Change_Password" = "パスワード変更";
+"Setting_Privacy_Setting" = "プライバシー設定";
+"Setting_Health_Data_Source" = "使用デバイス設定へ変更";
+"Setting_Favorite_Content" = "お気に入り";
+"Setting_Set_Email_Marketing" = "メール配信設定";
+"Setting_Push_Notification_Setting" = "プッシュ通知設定";
+"Setting_Reward_History" = "電子マネー 獲得履歴";
+"Setting_Select_Paid_Plan" = "課金プラン選択";
+"Setting_WATSON" = "Watsonと話す";
+"Setting_FQA" = "FAQ";
+"Setting_Advice" = "アドバイス";
+"Setting_Report_Bugs" = "お問い合わせ";
+"Setting_Use" = "使い方";
+"Setting_ToU_PP" = "利用規約＆プライバシーポリシー";
+"Setting_Logout" = "ログアウト";
+"Setting_Logout_Message" = "ログアウトしますか?";
+"Setting_Change_Fitbit_Confirm" = "デバイス変更する際に本日のデータの一部が引き継がれない場合がありますがよろしいですか？";
+
+// MARK: - -------------------------------- Privacy Setting --------------------------------
+"Privacy_Setting_Tittle" = "プライバシー設定";
+"Privacy_Setting_Health" = "健康に関するアドバイスを生成するためにあなたの健康情報を使ってもよろしいでしょうか。";
+"Privacy_Setting_Profile" = "あなたの健康情報を取得するために、GOBEやFIBITアカウント情報を保存してもよろしいでしょうか。";
+// MARK: - -------------------------------- Email Setting --------------------------------
+"Email_Setting_Tittle" = "メール配信設定";
+"Email_Setting_Receive_Mail_Title" = "メール受信";
+"Email_Setting_Current_Title" = "メールアドレス";
+// MARK: - -------------------------------- Notification Setting --------------------------------
+"Notification_Setting_Tittle" = "プッシュ通知設定";
+"Notification_Setting_Label_01" = "プッシュ通知";
+"Notification_Setting_Label_02" = "GENKIMIRUからのお知らせ";
+"Notification_Setting_Label_03" = "GENKIMIRUのAIアドバイス";
+"Notification_Setting_Label_04" = "コンテストに関する通知";
+"Updated_Notification_Successfully" = "通知を正常に更新しました";
+
+// MARK: - -------------------------------- Dashboard --------------------------------
+"Dashboard_Tittle" = "ダッシュボード";
+"Steps" = "歩数";
+"steps" = "歩";
+"Average" = "平均値";
+"Min" = "最低";
+"Max" = "最高";
+"Energy_Balance" = "エネルギーバランス";
+"Heart_Rate" = "⼼拍数";
+"HeartRate_Average" = "平均心拍数";
+"Sleep" = "睡眠";
+"Stress_Level" = "ストレス指数";
+"Stress" = "ストレス";
+"Weight" = "体重";
+"BMI" = "BMI";
+"Water" = "水分";
+"Nutrition" = "摂取カロリー";
+"Chat_with_WATSON" = "Watsonと話す";
+"Days" = "日";
+"Weeks" = "週";
+"Months" = "月";
+"Now_Button_Title" = "今";
+"Advice_Button_Title" = "アドバイス";
+"Title_Shop_EC" = "今すぐ購⼊︕";
+
+"Total" = "合計";
+"Month_Total" = "月間合計";
+"Week_Total" = "週間合計";
+"Year_Total" = "年間合計";
+"Warning_Message" = "%@のウェアラブルを使⽤した際に手入力できなくなります";
+"Fitbit" = "Fitbit";
+"GOBE" = "GoBe2";
+"Water_level_Low" = "⽔分不⾜";
+"Water_level_Normal" = "適度";
+"Summarize" = "合計";
+"Chart_Data_Loading" = "読み込み中...";
+"No_Chart_Data_Available" = "データがありません。";
+"No_Advice_Data" = "アドバイスがありません";
+"Dashboard_Coin_Title" = "Gヘルスケア ポイント";
+"Dashboard_Money_Title" = "医療費抑制効果⾦額";
+"No_Data" = "データがありません";
+
+"Stress_Level_Extreme" = "⾮常に⾼いストレス";
+"Stress_Level_High" = "⾼いストレス";
+"Stress_Level_Moderate" = "中程度のストレス";
+"Stress_Level_Low" = "低いストレス";
+"Stress_Level_No" = "ストレスなし";
+"Stress_Current_Stress_Level_Title" = "(現在のストレスレベル)";
+"Stress_Hour_Unit" = "時間";
+"Stress_Minute_Unit" = "分";
+"Stress_No_GOBE_Title" = "ストレスデータがありません。\n※※GoBe2のウェアラブルを\n 使⽤した際に⾃動で表⽰されます。";
+
+"Sleep_Level_Deep" = "深い睡眠";
+"Sleep_Level_Light" = "浅い睡眠";
+"Sleep_Level_REM" = "レム睡眠";
+"Sleep_Level_Falling" = "目覚めた状態";
+"Sleep_No_Data" = "グラフのデータがありません";
+"Sleep_Manual_Input_Title" = "手入力";
+"Sleep_Rating_Title" = "自分の睡眠品質を評価してください";
+"Sleep_Suggestion_Title" = "下記の基準を参考ください";
+"Sleep_Hours_Unit" = "時間";
+
+"Weight_Level_Underweight" = "低体重";
+"Weight_Level_Normal" = "普通体重";
+"Weight_Level_Pre_obesity" = "肥満（1度）";
+"Weight_Level_Obesity_I" = "肥満（2度）";
+"Weight_Level_Obesity_II" = "肥満（3度）";
+"Weight_Level_Obesity_III" = "肥満（4度）";
+"Weight_Height_Title" = "身長";
+"Weight_Weight_Title" = "体重";
+"Weight_Record_Button_Title" = "記録";
+"Weight_Minimum_Title" = "最低体重";
+"Weight_Maximum_Title" = "最大体重";
+"Weight_Average_Weight_Title" = "平均体重";
+"Weight_Average_BMI_Title" = "BMIの平均値";
+"Weight_BMI_Minimum_Title" = "BMIの最小値";
+"Weight_BMI_Maximum_Title" = "BMIの最大値";
+
+"Energy_Balance_Advice_Info" = "このグラフで表示される摂取カロリーは暫定的な摂取カロリーになります。確定数値はgobe2のappをご覧下さい。";
+"Energy_Kcal_In_Title" = "摂取カロリー";
+"Energy_Kcal_Out_Title" = "消費カロリー";
+"Manual_Title" = "手入力";
+"Update_Manual_Successful_Message" = "データが更新されました。";
+"Update_Manual_Failed_Message" = "データの更新が失敗しました。";
+"No_Record_Title" = "レコードがありません。";
+"My_Data_Error_Title" = "データ同期は時間が必要です。少々お待ちください。";
+// MARK: - -------------------------------- Contests --------------------------------
+"Contests_Tittle" = "コンテスト";
+"Contests_Currents" = "参加中のコンテスト";
+"Contests_Privates" = "プライベートコンテスト";
+"Contests_Publics" = "公開コンテスト";
+"Contests_Recommend" = "おすすめのコンテスト";
+"Contests_History" = "コンテスト履歴";
+"Contests_Start_Date" = " 開始日 ";
+"Contests_End_Date" = " 終了日 ";
+"Contests_Create_Date" = " 作成日 ";
+"Contests_Won_Label" = "入賞者";
+"Contests_Joined_Label" = "参加者数";
+"Contests_Show_More" = "もっと見る";
+"Contests_Show_Less" = "省略";
+"Contests_Join_Now" = "参加";
+"Contests_Points" = "円分";
+"Contests_Not_Join" = "Not Join";
+"Contests_Not_Start" = "未開始";
+"Contests_In_Progress" = "開催中";
+"Contests_Finish" = "終了済み";
+"Contests_Done" = "完了";
+"Contests_Cancel" = "キャンセル";
+"Contests_No_Have" = "コンテストがありません。";
+"Contests_Unable_Get_List" = "コンテスト一覧を取得できません。";
+"Contests_Detail_Unable_Get_List" = "コンテストの詳細を取得できません。";
+
+// MARK: - -------------------------------- Contests Detail --------------------------------
+"Challenges" = "チャレンジ";
+"Completed" = "完了";
+"completed" = "完了";
+"Join" = "参加";
+"Contest_Detail_days" = "日";
+"Contest_Detail_hours" = "時";
+"Contest_Detail_minutes" = "分";
+"Contest_Detail_seconds" = "秒";
+"Contest_Detail_Join_Successfull" = "コンテストに参加しました。";
+// MARK: - -------------------------------- Challenges Detail --------------------------------
+"Challenge_Information" = "チャレンジ情報";
+"Challenge_History" = "チャレンジ履歴";
+"Challenge_Description" = "説明";
+"Challenge_Start" = "スタート";
+"Challenge_Stop" = "終了";
+"Challenge_Go" = "Go!";
+"Challenge_Completed" = "チャレンジの目標は達成しました。チャレンジを終了しますか。";
+
+// MARK: - -------------------------------- Reward --------------------------------
+"Reward_History" = "電子マネー 獲得履歴";
+"Reward_Total_Points" = "ＥＤＹ交換可能合計 :";
+"Reward_Used" = "ＥＤＹ交換済み分 :";
+"Reward_Remain" = "ＥＤＹ交換可能残高 :";
+"Reward_Detail" = "明細";
+"Reward_Completed_Date_Title" = "完了日 :";
+"Reward_Point_Title" = "Edy :";
+"Reward_Point_Unit" = "円";
+// MARK: - -------------------------------- Notification --------------------------------
+"Notification_Tittle" = "通知";
+"Notification_Input_Code_Tittle" = "招待されたプログラムに参加するためにコードを入力してください。";
+"Notification_Invalid_Code" = "Invalid Code";
+
+// MARK: - -------------------------------- Content Feed --------------------------------
+"Content_Feed_Tittle" = "フィード";
+"Content_Feed_Advertisement" = "広告";
+"Content_Error_Title" = "フィード";
+"Content_Write_Your_Comment" = "コメントする。。。";
+"Content_Comment_Year" = "年前";
+"Content_Comment_Month" = "ヶ月前";
+"Content_Comment_Day" = "日前";
+"Content_Comment_Hour" = "時間前";
+"Content_Comment_Minute" = "分前";
+"Content_Comment_Second" = "秒前";
+"Content_Comment_Years" = "年前";
+"Content_Comment_Months" = "ヶ月前";
+"Content_Comment_Days" = "日前";
+"Content_Comment_Hours" = "時間前";
+"Content_Comment_Minutes" = "分前";
+"Content_Comment_Seconds" = "秒前";
+"Content_Comment_Just_Now" = "数秒前";
+
+// MARK: - -------------------------------- Challenge Detail --------------------------------
+"Challenge_Detail_Title" = "Challenge Detail";
+
+// MARK: - -------------------------------- Edit Profile --------------------------------
+"Edit_Profile_Tittle" = "プロフィール更新";
+"male" = "男性";
+"female" = "⼥性";
+"nick_name" = "ニックネーム :";
+"email" = "メールアドレス :";
+"first_name" = "姓 :";
+"last_name" = "名 :";
+"health_check_result" = "健康診断結果 :";
+
+"liqid_title" = "脂質";
+"liver_title" = "肝機能";
+"blood_title" = "⾎糖 HbA1c";
+"urina_title" = "尿蛋⽩";
+"liqid_fat_neutral" = "中性脂肪";
+"liqid_cholesterol_hdl" = "HDL";
+"liqid_cholesterol_ldl" = "LDL";
+"liqid_cholesterol_hdl_Long_String" = "HDLコレステロール";
+"liqid_cholesterol_ldl_Long_String" = "LDLコレステロール";
+"liver_got" = "GOT";
+"liver_gpt" = "GPT";
+"liver_vgt" = "v-GT";
+
+// MARK: - -------------------------------- Report Bug --------------------------------
+"Report_Bug_Title" = "タイトル";
+"Report_Bug_Problem" = "問題はなんですか。";
+"Report_Bug_Severity" = "重大度";
+"Report_Bug_Low_Level" = "低";
+"Report_Bug_Medium_Level" = "中";
+"Report_Bug_High_Level" = "高";
+"Report_Bug_Critical_Level" = "危機";
+"Report_Bug_Problem_Description" = "問題の内容を記入してください。";
+"Report_Bug_Success" = "お問い合わせが送信されました。";
+"Report_Bug_Fail" = "お問い合わせが送信できませんでした。";
+
+// MARK: - -------------------------------- Common --------------------------------
+"Title_Camera" = "写真を撮る";
+"Title_Photo" = "写真を選択";
+"Title_Popup" = "プロフィールの写真を選んでください ";
+"Title_Agree" = "同意";
+"Title_Bar_Code" = "バーコードで確認する";
+"Title_GPS" = "GPSで確認";
+"Title_Checking_Location" = "場所の確認しています...";
+"DateFormatter" = "yyyy年 MM月 dd日";
+"No_Network_Title" = "ネットワーク接続エラー";
+"No_User_Data" = "現在、データを取得できません。しばらくしてからもう一度お試しください。";
+
+// MARK: -------------------------------- Keyboard --------------------------------
+"Keyboard.Button.Done" = "完了";
+"Keyboard.Button.Cancel" = "キャンセル";
+"Keyboard.Button.OK" = "OK";
+"Keyboard.Button.Edit" = "更新";
+"Keyboard.Button.NotAllow" = "不許可";
+"Keyboard.Button.Add" = "記録";
+"Keyboard.Button.Delete" = "削除";
+"Keyboard.Button.Later" = "後で";
+
+
+// MARK: -------------------------------- MESSAGE --------------------------------
+"Title_Send_Mail_Success" = "メールを送りました。";
+"Title_Change_Password_Success" = "変更が完了しました.";
+"Title_Change_Password_Fail" = "パスワードは変更できません";
+"Title_Chat_With_Watson" = "Watsonと話す";
+"Title_Message_Privacy" = "情報取得を許可しない場合、アドバイス機能が動けなくなりますのでご注意ください。";
+
+// MARK: -------------------------------- TITLE POPUP --------------------------------
+"Title_Device_Profile_Popup" = "GOBEアカウントを入力してください。";
+"Title_FitBit_Device_Profile_Popup" = "FITBITアカウントを入力してください。";
+"Title_Warning" = "ワーニング";
+
+// Error title
+"Error_Title" = "エラーメッセージ";
+"Input_Error_Title" = "入力エラー";
+"Login_Error_Title" = "ログインエラー";
+"User_Info_Error_Title" = "ユーザー情報エラー";
+"Update_User_Info_Error_Title" = "ユーザー情報更新エラー";
+"Update_Error_Title" = "更新エラー";
+"Change_Password_Error_Title" = "パスワード変更エラー";
+"Term_of_use_Error_Title" = "利用規約";
+"Register_Error_Title" = "登録エラー";
+"Gobe_Error_Title" = "Gobeリクエストエラー";
+"Fitbit_Error_Title" = "Fitbitリクエストエラー";
+"Contest_Error_Title" = "コンテスト一覧取得エラー";
+"Reward_Error_Title" = "リワード一覧取得エラー";
+"Shop_Error_Title" = "Get Shop Error";
+
+// Error message
+"Message_Title" = "メッセージ";
+"Username_Length_Error_Message" = "ユーザー名は8文字以上の半角英数字を入力してください。";
+"Password_Blank_Error_Message" = "パスワードを入力してください。";
+"Dont_Check_TermsOfUse_Error_Message" = "利用規約の内容をご確認のうえ、「同意する」チェックボックスにチェックを入れてください。";
+"Dont_Check_TermsOfUse_Error_Message_02" = "利用規約及び個人保護方針の内容をご確認のうえ、「同意する」チェックボックスにチェックを入れてください。";
+"Datetime_Error_Message" = "入力した日付が正しくありません。";
+"Email_not_Valid_Error_Message" = "入力したメールアドレスが正しくありません。";
+"Input_Length_not_Valid_Error_Message" = "入力値は8文字から225文字以内で入力してください。";
+"Input_Optional_Length_not_Valid_Error_Message" = "入力値は225文字以内で入力してください。";
+"Password_Confirm_Error_Message" = "パスワードが確認用パスワードと一致していません。";
+"Input_Max_Length_Error_Message" = "入力値は225文字以内で入力してください。";
+"Avatar_Max_Length_Error_Message" = "Maximum length is 1024";
+"Input_Empty_Error_Message" = "この項目は入力が必須です";
+"Input_Height_Error_Message" = "入力値は正しくありません。";
+"Input_Weight_Error_Message" = "入力値は正しくありません。";
+
+"Reset_Password_Success_Message" = "パスワードのリセットが完了しました。";
+"Reset_Password_Fail_Message" = "パスワードのリセットが失敗しました";
+"Register_Successfull" = "登録が完了しました。";
+"Request_FitBit_Successfull" = "Fitbitからリクエストが成功しました。";
+"Request_Gobe_Successfull" = "Gobeからリクエストが成功しました。";
+"Update_Successful_Message" = "更新が完了しました。";
+"Unknown_Error" = "不明なエラーが発生しました";
+"Unknown" = "発生しました";
+
+// Server error message
+"C_E_001" = "サーバーに接続できませんでした。";
+"C_E_002" = "申し訳ございませんが何か不具合がありました。";
+"C_E_003" = "このサービスを使う権限がありません。";
+"C_E_004" = "トークンの期限が切れました。もう一度ログインしてください。";
+"C_E_005" = "トークンが正しくありません。もう一度ログインしてください。";
+"C_E_006" = "トークンが必須です。";
+"C_E_007" = "アクセス権限がありません。";
+"Login_001_E_008" = "このアカウントが存在しません。";
+"Login_001_E_009" = "パスワードが正しくありません。";
+"UpdatePassword_001_E_007" = "新しいパスワードは現在のパスワードと重複しています。";
+"UpdatePassword_001_E_008" = "現在のパスワードは正しくありません。";
+"RecoverPassword_001_E_007" = "入力したコードの有効期限が切れました。もう一度確認してください。";
+"RecoverPassword_001_E_008" = "入力したコードが存在しません。もう一度確認してください。";
+"RecoverPassword_001_E_009" = "Code Not Update";
+// MARK: - -------------------------------- SpeechRecognition --------------------------------
+"Speech recognition" = "音声認識";
+"Done" = "完了";
+
+// MARK: - -------------------------------- FAQ --------------------------------
+"Title_Can_Not_Load_FAQ" = "質問一覧を取得できませんでした。";
+
+// MARK: - -------------------------------- Advice --------------------------------
+"Title_Advice_Today" = "今⽇";
+"Title_Advice_Yesterday" = "昨⽇";
+"Title_Advice_This_Week" = "今週";
+"Title_Advice_Last_Week" = "先週";
+"Title_Advice_This_Month" = "今⽉";
+"Title_Advice_Last_Month" = "先⽉";
+
+// MARK: - -------------------------------- Walking --------------------------------
+"Photo_Title" = "写真";
+"Photo_Add_Success" = "写真が追加されました。";
+"Photo_Add_Error" = "写真を追加できません。もう一度試してください。";
+"Photo_Delete_Message" = "この写真を削除してもよろしいでしょうか。";
+"No_Photo" = "写真がありません。";
+"Gallery" = "写真";
+"Walking_Challenge" = "ワーキングチャレンジ";
+"Walking_Stopped_Challenge" = "チャレンジを終了しました";

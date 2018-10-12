@@ -1,0 +1,549 @@
+/*
+ NetworkLocalizable.strings
+ ASHManager
+ 
+ Created by HaiPT15 on 12/13/17.
+ Copyright © 2017 Asahi. All rights reserved.
+ */
+
+// MARK: -------------------------------- Common message --------------------------------
+"NetworkError_Unknown" = "An unknown error has occurred please try again later";
+"NetworkError_NotConnectedToInternet" = "Check your connection and try again.";
+"NetworkError_InternationalRoamingOff" = "International Roaming Off";
+"NetworkError_NotReachedServer" = "Can not connect to server";
+"NetworkError_ConnectionLost" = "Lost Connection";
+"NetworkError_IncorrectDataReturned" = "Incorrect Data Returned";
+"NetworkError_LoginAdmin" = "You can't login with admin";
+
+"C_E_001" = "";
+"C_E_002" = "";
+"C_E_003" = "";
+"C_E_004" = "Access token is expired";
+"C_E_005" = "Access token is invalid";
+"C_E_006" = "Access token is required";
+"C_E_007" = "";
+
+// MARK: -------------------------------- /api/v1/login --------------------------------
+"Login_001_E_001" = "Username is required.";
+"Login_001_E_002" = "";
+"Login_001_E_003" = "";
+"Login_001_E_004" = "";
+"Login_001_E_005" = "Password is required.";
+"Login_001_E_006" = "";
+"Login_001_E_007" = "";
+"Login_001_E_008" = "Username or password is incorrect.";
+"Login_001_E_009" = "Username or password is incorrect.";
+"Login_001_E_011" = "";
+"Login_001_E_012" = "";
+"Login_001_E_013" = "Please input username or Email.";
+"Login_001_E_015" = "";
+"Login_001_E_014" = "";
+
+// MARK: -------------------------------- /api/v1/user/register --------------------------------
+"RegisterUser_001_E_001" = "Username is required.";
+"RegisterUser_001_E_002" = "Username must be at least 8 characters.";
+"RegisterUser_001_E_003" = "Usernames must be 20 characters or less.";
+"RegisterUser_001_E_004" = "Username must be alphanumeric characters.";
+"RegisterUser_001_E_005" = "Password is required.";
+"RegisterUser_001_E_006" = "Passwords must be at least 8 characters.";
+"RegisterUser_001_E_007" = "Passwords must be 225 characters or less.";
+"RegisterUser_001_E_008" = "Email is required.";
+"RegisterUser_001_E_009" = "Incorrect email format.";
+"RegisterUser_001_E_010" = "Email must be 225 characters or less.";
+"RegisterUser_001_E_043" = "Under age 13 can not register this application.";
+"RegisterUser_001_E_011" = "Invalid date format. Please enter the date in the format yyyy-mm-dd";
+"RegisterUser_001_E_012" = "";
+"RegisterUser_001_E_013" = "";
+"RegisterUser_001_E_044" = "Wrong file format (jpeg, jpg, png only)";
+"RegisterUser_001_E_014" = "Maximun upload file size: 1MB";
+"RegisterUser_001_E_015" = "Firstname must be 10 characters or less.";
+"RegisterUser_001_E_016" = "Lastname must be 10 characters or less.";
+"RegisterUser_001_E_017" = "Height is required.";
+"RegisterUser_001_E_018" = "";
+"RegisterUser_001_E_019" = "";
+"RegisterUser_001_E_020" = "";
+"RegisterUser_001_E_021" = "";
+"RegisterUser_001_E_022" = "Weight is required.";
+"RegisterUser_001_E_023" = "";
+"RegisterUser_001_E_024" = "";
+"RegisterUser_001_E_025" = "";
+"RegisterUser_001_E_026" = "";
+"RegisterUser_001_E_027" = "";
+"RegisterUser_001_E_028" = "";
+"RegisterUser_001_E_029" = "";
+"RegisterUser_001_E_030" = "";
+"RegisterUser_001_E_031" = "";
+"RegisterUser_001_E_032" = "";
+"RegisterUser_001_E_033" = "";
+"RegisterUser_001_E_034" = "";
+"RegisterUser_001_E_035" = "";
+"RegisterUser_001_E_036" = "";
+"RegisterUser_001_E_057" = "Gobe username is required when health source is Gobe";
+"RegisterUser_001_E_037" = "";
+"RegisterUser_001_E_058" = "Gobe password is required when health source is Gobe";
+"RegisterUser_001_E_038" = "";
+"RegisterUser_001_E_045" = "";
+"RegisterUser_001_E_046" = "";
+"RegisterUser_001_E_047" = "Nickname must be at least 20 characters.";
+"RegisterUser_001_E_048" = "Address must be 225 characters or less.";
+"RegisterUser_001_E_049" = "";
+"RegisterUser_001_E_050" = "";
+"RegisterUser_001_E_051" = "";
+"RegisterUser_001_E_052" = "";
+"RegisterUser_001_E_059" = "Health source is required.";
+"RegisterUser_001_E_060" = "";
+"RegisterUser_001_E_061" = "Fitbit access token is requied.";
+"RegisterUser_001_E_062" = "";
+"RegisterUser_001_E_041" = "This usename is already in use. Please use another.";
+"RegisterUser_001_E_042" = "This email is already in use. Please use another.";
+"RegisterUser_001_E_053" = "";
+"RegisterUser_001_E_054" = "";
+"RegisterUser_001_E_055" = "Under age 13 can not register this application.";
+"RegisterUser_001_E_056" = "Sorry, this message could not be sent. Please try again.";
+"RegisterUser_001_E_068" = "Please enter a height value greater than 0.";
+"RegisterUser_001_E_069" = "Please enter a weight value greater than 0.";
+"RegisterUser_001_E_064" = "";
+"RegisterUser_001_E_081" = "Blood pressure is not correct.";
+"RegisterUser_Require_FirstName" = "First name is required.";
+"RegisterUser_Require_LastName" = "Last name is required.";
+"RegisterUser_Contain_Special_Character" = "Input contains invalid characters";
+
+// MARK: -------------------------------- /api/v1/user/update --------------------------------
+"UpdateUser_001_E_001" = "Incorrect email format.";
+"UpdateUser_001_E_002" = "Email must be 225 characters or less.";
+"UpdateUser_001_E_003" = "Invalid date format. Please enter the date in the format yyyy-mm-dd.";
+"UpdateUser_001_E_004" = "Under age 13 can not register this application.";
+"UpdateUser_001_E_005" = "";
+"UpdateUser_001_E_006" = "";
+"UpdateUser_001_E_007" = "Maximun upload file size: 1MB";
+"UpdateUser_001_E_008" = "Wrong file format (jpeg, jpg, png only)";
+"UpdateUser_001_E_009" = "Firstname must be 10 characters or less.";
+"UpdateUser_001_E_010" = "Lastname must be 10 characters or less.";
+"UpdateUser_001_E_011" = "Please enter a height value greater than 0.";
+"UpdateUser_001_E_012" = "";
+"UpdateUser_001_E_013" = "Please enter a weight value greater than 0.";
+"UpdateUser_001_E_014" = "";
+"UpdateUser_001_E_022" = "";
+"UpdateUser_001_E_023" = "";
+"UpdateUser_001_E_024" = "";
+"UpdateUser_001_E_025" = "";
+"UpdateUser_001_E_028" = "";
+"UpdateUser_001_E_029" = "";
+"UpdateUser_001_E_026" = "";
+"UpdateUser_001_E_027" = "";
+"UpdateUser_001_E_015" = "";
+"UpdateUser_001_E_016" = "";
+"UpdateUser_001_E_017" = "";
+"UpdateUser_001_E_018" = "";
+"UpdateUser_001_E_019" = "";
+"UpdateUser_001_E_020" = "";
+"UpdateUser_001_E_021" = "";
+"UpdateUser_001_E_045" = "Gobe_username is required when health_source is Gobe";
+"UpdateUser_001_E_034" = "";
+"UpdateUser_001_E_046" = "Gobe_passworn is required when health_source is Gobe";
+"UpdateUser_001_E_035" = "";
+"UpdateUser_001_E_036" = "Nickname must be 10 characters or less.";
+"UpdateUser_001_E_037" = "Address must be 225 characters or less.";
+"UpdateUser_001_E_038" = "";
+"UpdateUser_001_E_039" = "";
+"UpdateUser_001_E_040" = "";
+"UpdateUser_001_E_041" = "";
+"UpdateUser_001_E_047" = "Fitbit access token is requied.";
+"UpdateUser_001_E_048" = "";
+"UpdateUser_001_E_049" = "Health source is required.";
+"UpdateUser_001_E_050" = "";
+"UpdateUser_001_E_030" = "This usename is already in use. Please use another.";
+"UpdateUser_001_E_031" = "";
+"UpdateUser_001_E_032" = "";
+"UpdateUser_001_E_033" = "";
+"UpdateUser_001_E_042" = "";
+"UpdateUser_001_E_043" = "";
+"UpdateUser_001_E_044" = "Under age 13 can not register this application.";
+"UpdateUser_001_E_067" = "";
+"UpdateUser_001_E_072" = "Email address already exists. Please input a new email address";
+
+// MARK: -------------------------------- /api/v1/user/detail --------------------------------
+"GetUserInformationService_Err_01" = "This username does not exists.";
+
+// MARK: -------------------------------- /api/v1/user/password --------------------------------
+"UpdatePassword_001_E_001" = "Password is required.";
+"UpdatePassword_001_E_002" = "Passwords must be at least 8 characters.";
+"UpdatePassword_001_E_003" = "Passwords must be 225 characters or less.";
+"UpdatePassword_001_E_004" = "Current password is required.";
+"UpdatePassword_001_E_005" = "New passwords must be at least 8 characters.";
+"UpdatePassword_001_E_006" = "New passwords must be 225 characters or less.";
+"UpdatePassword_001_E_007" = "New password is duplicate with current password.";
+"UpdatePassword_001_E_008" = "Current Password is incorrect.";
+
+// MARK: -------------------------------- /api/v1/user/forgot_password --------------------------------
+"SendCodePassword_001_E_001" = "Email is required.";
+"SendCodePassword_001_E_002" = "";
+"SendCodePassword_001_E_003" = "";
+"SendCodePassword_001_E_004" = "This email does not exist.";
+"SendCodePassword_001_E_005" = "Sorry, this message could not be sent. Please try again.";
+
+// MARK: -------------------------------- /api/v1/user/active_password --------------------------------
+"RecoverPassword_001_E_001" = "Password is required.";
+"RecoverPassword_001_E_002" = "Passwords must be at least 8 characters.";
+"RecoverPassword_001_E_003" = "Password must be 225 characters or less.";
+"RecoverPassword_001_E_004" = "Active code is required";
+"RecoverPassword_001_E_005" = "";
+"RecoverPassword_001_E_006" = "";
+"RecoverPassword_001_E_007" = "This username does not exists.";
+"RecoverPassword_001_E_008" = "This active code does not exists.";
+"RecoverPassword_001_E_009" = "";
+
+// MARK: -------------------------------- /api/v1/user/my_data --------------------------------
+"MyData_001_E_001" = "";
+"MyData_001_E_002" = "";
+"MyData_001_E_003" = "";
+"MyData_001_E_004" = "";
+"MyData_001_E_005" = "";
+"MyData_001_E_006" = "";
+"MyData_001_E_007" = "";
+"MyData_001_E_008" = "";
+
+// MARK: -------------------------------- /api/v1/user/my_data/manual/import --------------------------------
+"ManualInput_001_E_001" = "";
+"ManualInput_001_E_002" = "";
+"ManualInput_001_E_003" = "";
+"ManualInput_001_E_004" = "";
+"ManualInput_001_E_005" = "";
+"ManualInput_001_E_006" = "";
+"ManualInput_001_E_007" = "";
+"ManualInput_001_E_008" = "";
+"ManualInput_001_E_009" = "";
+
+// MARK: -------------------------------- /api/v1/contest/list --------------------------------
+"ListContest_001_E_001" = "";
+"ListContest_001_E_002" = "";
+"ListContest_001_E_003" = "";
+"ListContest_001_E_004" = "";
+"ListContest_001_E_005" = "";
+"ListContest_001_E_008" = "";
+"ListContest_001_E_009" = "";
+"ListContest_001_E_010" = "";
+"ListContest_001_E_011" = "";
+"ListContest_001_E_016" = "";
+"ListContest_001_E_017" = "";
+"ListContest_001_E_018" = "";
+"ListContest_001_E_019" = "";
+"ListContest_001_E_020" = "";
+"ListContest_001_E_021" = "";
+"ListContest_001_E_022" = "";
+"ListContest_001_E_023" = "";
+"ListContest_001_E_024" = "";
+"ListContest_001_E_025" = "";
+"ListContest_001_E_026" = "";
+"ListContest_001_E_027" = "";
+"ListContest_001_E_028" = "";
+"ListContest_001_E_029" = "";
+"ListContest_001_E_030" = "";
+"ListContest_001_E_031" = "";
+"ListContest_001_E_032" = "";
+"ListContest_001_E_033" = "";
+
+// MARK: -------------------------------- /api/v1/contest/{id} --------------------------------
+"ContestDetail_001_E_002" = "";
+"ContestDetail_001_E_001" = "";
+
+// MARK: -------------------------------- /api/v1/contest/user/list --------------------------------
+"ListUserContest_001_E_001" = "";
+"ListUserContest_001_E_002" = "";
+"ListUserContest_001_E_003" = "";
+"ListUserContest_001_E_004" = "";
+"ListUserContest_001_E_005" = "";
+"ListUserContest_001_E_006" = "";
+"ListUserContest_001_E_007" = "";
+"ListUserContest_001_E_008" = "";
+"ListUserContest_001_E_009" = "";
+"ListUserContest_001_E_0010" = "";
+
+// MARK: -------------------------------- /api/v1/contest/user/recommend --------------------------------
+"RecommendContest_001_E_001" = "";
+"RecommendContest_001_E_002" = "";
+"RecommendContest_001_E_003" = "";
+"RecommendContest_001_E_004" = "";
+"RecommendContest_001_E_005" = "";
+"RecommendContest_001_E_006" = "";
+"RecommendContest_001_E_007" = "";
+"RecommendContest_001_E_008" = "";
+"RecommendContest_001_E_009" = "";
+"RecommendContest_001_E_010" = "";
+"RecommendContest_001_E_011" = "";
+"RecommendContest_001_E_012" = "";
+
+// MARK: -------------------------------- /api/v1/contest/reward --------------------------------
+"ListRewardContest_001_E_001" = "";
+"ListRewardContest_001_E_002" = "";
+"ListRewardContest_001_E_003" = "";
+"ListRewardContest_001_E_004" = "";
+"ListRewardContest_001_E_005" = "";
+"ListRewardContest_001_E_006" = "";
+"ListRewardContest_001_E_007" = "";
+"ListRewardContest_001_E_008" = "";
+
+// MARK: -------------------------------- /api/v1/contest/history/list --------------------------------
+"HistoryContest_001_E_001" = "";
+"HistoryContest_001_E_002" = "";
+"HistoryContest_001_E_003" = "";
+"HistoryContest_001_E_004" = "";
+"HistoryContest_001_E_005" = "";
+"HistoryContest_001_E_006" = "";
+"HistoryContest_001_E_007" = "";
+"HistoryContest_001_E_008" = "";
+
+// MARK: -------------------------------- /api/v1/payment/add --------------------------------
+"PaymentTransaction_001_E_001" = "";
+"PaymentTransaction_001_E_002" = "";
+"PaymentTransaction_001_E_003" = "";
+
+// MARK: -------------------------------- /api/v1/manual/add --------------------------------
+"AddManual_001_E_001" = "";
+"AddManual_001_E_002" = "";
+"AddManual_001_E_003" = "";
+"AddManual_001_E_004" = "";
+"AddManual_001_E_005" = "";
+"AddManual_001_E_006" = "";
+"AddManual_001_E_007" = "";
+"AddManual_001_E_008" = "";
+"AddManual_001_E_009" = "";
+
+// MARK: -------------------------------- /api/v1/manual/update --------------------------------
+"UpdateManual_001_E_001" = "";
+"UpdateManual_001_E_002" = "";
+"UpdateManual_001_E_003" = "";
+"UpdateManual_001_E_004" = "";
+"UpdateManual_001_E_005" = "";
+"UpdateManual_001_E_006" = "";
+"UpdateManual_001_E_007" = "";
+"UpdateManual_001_E_008" = "";
+"UpdateManual_001_E_009" = "";
+"UpdateManual_001_E_010" = "";
+"UpdateManual_001_E_011" = "";
+"UpdateManual_001_E_012" = "";
+
+// MARK: -------------------------------- /api/v1/user/privacy/update --------------------------------
+"UpdatePrivacySetting_001_E_001" = "";
+"UpdatePrivacySetting_001_E_002" = "";
+
+// MARK: -------------------------------- /api/v1/paid_plan/list --------------------------------
+"ListPaidPlan_001_E_001" = "";
+"ListPaidPlan_001_E_002" = "";
+"ListPaidPlan_001_E_003" = "";
+"ListPaidPlan_001_E_004" = "";
+"ListPaidPlan_001_E_005" = "";
+"ListPaidPlan_001_E_006" = "";
+
+// MARK: -------------------------------- /api/v1/contest/user/join --------------------------------
+"JoinContest_001_E_001" = "";
+"JoinContest_001_E_002" = "";
+"JoinContest_001_E_003" = "";
+"JoinContest_001_E_004" = "";
+"JoinContest_001_E_005" = "";
+"JoinContest_001_E_006" = "This contest hasn't been started yet. Please join in later.";
+"JoinContest_001_E_007" = "Already joined";
+"JoinContest_001_E_008" = "Not in program";
+"JoinContest_001_E_009" = "An error occurred please try again later";
+"JoinContest_001_E_010" = "The user gender is not suibable the contest's gender setting";
+"JoinContest_001_E_012" = "The user age is not the suibable the contest's age setting";
+"JoinContest_001_E_013" = "The user bmi is not the suibable the contest's bmi setting";
+"JoinContest_001_E_014" = "The user drinking habit is not the suibable the contest's drinking habit setting";
+"JoinContest_001_E_015" = "The user smoking habit is not the suibable the contest's smoking habit setting";
+"JoinContest_001_E_016" = "Cannot join contest with Other wearable health source. Please check your health source setting";
+
+// MARK: -------------------------------- /api/v1/paid_plan/join --------------------------------
+"JoinPaidPlan_001_E_001" = "";
+"JoinPaidPlan_001_E_002" = "";
+"JoinPaidPlan_001_E_003" = "";
+"JoinPaidPlan_001_E_004" = "";
+"JoinPaidPlan_001_E_005" = "";
+
+// MARK: -------------------------------- /api/v1/photo/user/list --------------------------------
+"ListPhoto_001_E_001" = "";
+"ListPhoto_001_E_002" = "";
+"ListPhoto_001_E_003" = "";
+"ListPhoto_001_E_004" = "";
+"ListPhoto_001_E_005" = "";
+"ListPhoto_001_E_006" = "";
+"ListPhoto_001_E_007" = "";
+
+// MARK: -------------------------------- /api/v1/photo/user/add --------------------------------
+"AddPhoto_001_E_002" = "";
+"AddPhoto_001_E_001" = "";
+"AddPhoto_001_E_006" = "";
+"AddPhoto_001_E_005" = "";
+"AddPhoto_001_E_004" = "";
+"AddPhoto_001_E_003" = "";
+"AddPhoto_001_E_007" = "";
+
+// MARK: -------------------------------- /api/v1/photo/user/delete --------------------------------
+"DeletePhoto_001_E_001" = "";
+"DeletePhoto_001_E_002" = "";
+
+// MARK: -------------------------------- /api/v1/favorite/content/add --------------------------------
+"AddFavoriteContent_001_E_001" = "";
+"AddFavoriteContent_001_E_002" = "";
+"AddFavoriteContent_001_E_003" = "";
+"AddFavoriteContent_001_E_004" = "";
+
+// MARK: -------------------------------- /api/v1/favourite/content/user/delete --------------------------------
+"DeleteFavouriteContent_001_E_001" = "";
+"DeleteFavouriteContent_001_E_002" = "";
+"DeleteFavouriteContent_001_E_003" = "";
+
+// MARK: -------------------------------- api/v1/share_article/user/add --------------------------------
+"AddShareArticle_001_E_001" = "";
+"AddShareArticle_001_E_002" = "";
+"AddShareArticle_001_E_003" = "";
+"AddShareArticle_001_E_004" = "";
+"AddShareArticle_001_E_005" = "";
+
+// MARK: -------------------------------- /api/v1/user/email/subscribe --------------------------------
+"UpdateEmailMarketingSetting_001_E_001" = "";
+"UpdateEmailMarketingSetting_001_E_002" = "";
+
+// MARK: -------------------------------- /api/v1/user/manual_input/add --------------------------------
+"AddManualInput_001_E_001" = "";
+"AddManualInput_001_E_002" = "";
+"AddManualInput_001_E_003" = "";
+"AddManualInput_001_E_004" = "";
+"AddManualInput_001_E_005" = "";
+"AddManualInput_001_E_006" = "";
+"AddManualInput_001_E_007" = "";
+"AddManualInput_001_E_008" = "";
+"AddManualInput_001_E_009" = "";
+"AddManualInput_001_E_010" = "";
+"AddManualInput_001_E_011" = "";
+
+// MARK: -------------------------------- /api/v1/user/manual_input/{id}/update --------------------------------
+"UpdateManualInput_001_E_001" = "";
+"UpdateManualInput_001_E_002" = "";
+"UpdateManualInput_001_E_003" = "";
+"UpdateManualInput_001_E_004" = "";
+"UpdateManualInput_001_E_005" = "";
+"UpdateManualInput_001_E_006" = "";
+"UpdateManualInput_001_E_007" = "";
+"UpdateManualInput_001_E_008" = "";
+"UpdateManualInput_001_E_009" = "";
+"UpdateManualInput_001_E_010" = "";
+"UpdateManualInput_001_E_011" = "";
+"UpdateManualInput_001_E_014" = "";
+
+// MARK: -------------------------------- /api/v1/article --------------------------------
+"ListArticleContest_001_E_001" = "";
+"ListArticleContest_001_E_002" = "";
+"ListArticleContest_001_E_003" = "";
+"ListArticleContest_001_E_004" = "";
+"ListArticleContest_001_E_005" = "";
+"ListArticleContest_001_E_006" = "";
+"ListArticleContest_001_E_007" = "";
+"ListArticleContest_001_E_008" = "";
+
+// MARK: -------------------------------- /api/v1/article/detail --------------------------------
+"GetDetailArticle_001_E_001" = "";
+"GetDetailArticle_001_E_002" = "";
+"GetDetailArticle_001_E_004" = "";
+"GetDetailArticle_001_E_005" = "";
+"Document_001_E_001" = "";
+"GetDetailArticle_001_E_003" = "";
+
+// MARK: -------------------------------- /api/v1/advertisement/user/list --------------------------------
+"ListAdvertisement_001_E_001" = "";
+"ListAdvertisement_001_E_002" = "";
+"ListAdvertisement_001_E_003" = "";
+"ListAdvertisement_001_E_004" = "";
+"ListAdvertisement_001_E_005" = "";
+"ListAdvertisement_001_E_006" = "";
+"ListAdvertisement_001_E_007" = "";
+"ListAdvertisement_001_E_008" = "";
+"ListAdvertisement_001_E_009" = "";
+
+// MARK: -------------------------------- /api/v1/advertisement/detail --------------------------------
+"GetDetailAdvertisement_001_E_001" = "";
+"GetDetailAdvertisement_001_E_002" = "";
+"GetDetailAdvertisement_001_E_004" = "";
+"GetDetailAdvertisement_001_E_005" = "";
+"GetDetailAdvertisement_001_E_003" = "";
+
+// MARK: -------------------------------- /api/v1/comment/user/add --------------------------------
+"AddComment_001_E_001" = "";
+"AddComment_001_E_002" = "";
+"AddComment_001_E_003" = "";
+"AddComment_001_E_004" = "";
+"AddComment_001_E_005" = "";
+
+// MARK: -------------------------------- /api/v1/comment/user/list --------------------------------
+"ListComment_001_E_001" = "";
+"ListComment_001_E_002" = "";
+"ListComment_001_E_003" = "";
+
+// MARK: -------------------------------- /api/v1/program/user/active_code --------------------------------
+"CheckActiveCode_001_E_001" = "";
+"CheckActiveCode_001_E_002" = "";
+"CheckActiveCode_001_E_003" = "";
+"CheckActiveCode_001_E_004" = "";
+"CheckActiveCode_001_E_005" = "";
+
+// MARK: -------------------------------- /api/v1/user/notification/update --------------------------------
+"UpdateNotificationSetting_001_001_E_001" = "";
+"UpdateNotificationSetting_001_001_E_002" = "";
+"UpdateNotificationSetting_001_001_E_003" = "";
+"UpdateNotificationSetting_001_001_E_004" = "";
+"UpdateNotificationSetting_001_001_E_005" = "";
+"UpdateNotificationSetting_001_001_E_006" = "";
+
+// MARK: -------------------------------- /api/v1/user_contest_challenge/start_stop --------------------------------
+"StartStopChallenge_001_E_001" = "";
+"StartStopChallenge_001_E_002" = "UserContestID does not exist in database";
+"StartStopChallenge_001_E_003" = "";
+"StartStopChallenge_001_E_004" = "";
+"StartStopChallenge_001_E_005" = "User was not joined to challenge";
+"StartStopChallenge_001_E_006" = "You're not in Contest";
+"StartStopChallenge_001_E_011" = "Contest is not exist";
+"StartStopChallenge_001_E_012"= "Cannot start contest if you are starting the other contest now. Please finish contest to start the other contest.";
+
+// MARK: -------------------------------- /api/v1/user/setting/health_source/update --------------------------------
+"UpdateHealthSourceSetting_001_E_001" = "";
+"UpdateHealthSourceSetting_001_E_002" = "";
+
+// MARK: -------------------------------- /api/v1/user/my_data/applekit/import --------------------------------
+"MyAppleKitData_001_E_001" = "";
+"MyAppleKitData_001_E_002" = "";
+"MyAppleKitData_001_E_003" = "";
+"MyAppleKitData_001_E_004" = "";
+"MyAppleKitData_001_E_005" = "";
+"MyAppleKitData_001_E_006" = "";
+"MyAppleKitData_001_E_007" = "";
+
+// MARK: -------------------------------- /api/v1/login_google --------------------------------
+// MARK: -------------------------------- /api/v1/login_facebook --------------------------------
+// MARK: -------------------------------- /api/v1/logout --------------------------------
+// MARK: -------------------------------- /api/v1/be_ecommerce/login --------------------------------
+"Login_Ecommerce_Err_001" = "Username is required.";
+"Login_Ecommerce_Err_002" = "Username must be at least 8 characters.";
+"Login_Ecommerce_Err_003" = "Usernames must be 225 characters or less.";
+"Login_Ecommerce_Err_004" = "Username must be alphanumeric characters.";
+"Login_Ecommerce_Err_006" = "Password is required.";
+"Login_Ecommerce_Err_007" = "Password must be at least 8 characters.";
+"Login_Ecommerce_Err_008" = "Password must be 225 characters or less.";
+"Login_Ecommerce_Err_005" = "";
+"Login_Ecommerce_Err_009" = "";
+
+// MARK: -------------------------------- /api/v1/user_ecommerce/register --------------------------------
+"RegisterUserEcommerce_001_E_001" = "Firstname must be 10 characters or less.";
+"RegisterUserEcommerce_001_E_002" = "Lastname must be 10 characters or less.";
+"RegisterUserEcommerce_001_E_003" = "Email is required.";
+"RegisterUserEcommerce_001_E_004" = "Incorrect email format.";
+"RegisterUserEcommerce_001_E_005" = "Email must be at least 8 characters.";
+"RegisterUserEcommerce_001_E_007" = "Password is required.";
+"RegisterUserEcommerce_001_E_008" = "Password must be at least 8 characters.";
+"RegisterUserEcommerce_001_E_009" = "Password must be 255 characters or less.";
+"RegisterUserEcommerce_001_E_010" = "Username is required.";
+"RegisterUserEcommerce_001_E_011" = "Username must be at least 8 characters.";
+"RegisterUserEcommerce_001_E_012" = "Username must be 225 characters or less.";
+"RegisterUserEcommerce_001_E_013" = "Username must be alphanumeric characters.";
+"RegisterUserEcommerce_001_E_006" = "";
+"SendMessageService_error_01" = "";
+"RegisterUserEcommerce_001_E_015" = "";
+

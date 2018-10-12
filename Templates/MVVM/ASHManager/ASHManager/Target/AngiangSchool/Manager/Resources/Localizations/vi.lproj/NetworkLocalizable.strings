@@ -1,0 +1,14 @@
+/* 
+  NetworkLocalizable.strings
+  ASHManager
+
+  Created by HaiPT15 on 12/13/17.
+  Copyright © 2017 Asahi. All rights reserved.
+*/
+
+"NetworkError_Unknown" = "Có lỗi xảy ra, không biết nguyên nhân";
+"NetworkError_NotConnectedToInternet" = "Không thể kết nối internet";
+"NetworkError_InternationalRoamingOff" = "Đã tắt chế độ Roaming";
+"NetworkError_NotReachedServer" = "Không thể kết nối đến server";
+"NetworkError_ConnectionLost" = "Mất kết nối";
+"NetworkError_IncorrectDataReturned" = "Dữ liệu trả về bị lỗi";

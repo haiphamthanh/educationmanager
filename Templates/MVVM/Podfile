@@ -1,0 +1,113 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+workspace 'ASHManager'
+project 'ASHManager/ASHManager.xcodeproj'
+
+target 'ASHManager' do
+	# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+	use_frameworks!
+	
+	# Pods for ASHManager
+	# Localization
+	pod 'Localize-Swift', '~> 2.0'
+	# Logger
+	pod 'CocoaLumberjack/Swift'
+	# Color manager
+	pod 'UIColor_Hex_Swift'
+	# User defaults
+	pod 'SwiftyUserDefaults'
+	# Introduction
+	pod 'EAIntroView'
+	# UIPagecontrol
+	pod 'SMPageControl'
+	# keyboard
+	pod 'IQKeyboardManagerSwift', '~> 5.0.7'
+	# Indicator
+	pod 'NVActivityIndicatorView'
+	# Permission
+	pod 'PAPermissions'
+	# GoogleMaps
+	pod 'GoogleMaps'
+	# GooglePlaces
+	pod 'GooglePlaces'
+	# Message
+	pod 'JSQMessagesViewController'
+	
+	# Pods for presentation
+	# Menu
+	pod 'SlideMenuControllerSwift'
+	pod 'RAMAnimatedTabBarController’
+	# Photo
+	pod 'PreviewTransition'
+	pod 'ImageSlideshow'
+	# Toast
+	pod 'Toast-Swift', '~> 3.0.1'
+	# Dialog
+	pod 'PopupDialog', '~> 0.6'
+	# Pull to refresh
+	pod 'ESPullToRefresh'
+	# Cell Customization
+	#	  pod 'FoldingCell'
+	# QR Code scanner
+	pod 'QRCodeReader.swift', '~> 8.0.3'
+	#ProgressBar
+	pod 'Charts', '~> 3.0.5'
+	pod 'XLPagerTabStrip', '~> 8.0'
+	pod 'MZTimerLabel'
+	#Pod Clock
+	
+	# Pods for Design pattern
+	# Dependency injection
+	pod 'Swinject', '~> 2.1.0'
+	# Reactive
+	pod 'RxSwift',    '~> 4.0'
+	pod 'RxCocoa',    '~> 4.0'
+	pod 'RxGesture'
+	
+	# Pods for Network
+	# Network checking
+	pod 'ReachabilitySwift'
+	# HTTP networking
+	pod 'Alamofire', '~> 4.5'
+	# Network Abstration layer
+	pod 'Moya'
+	pod 'Moya/RxSwift'
+	# Downloading and caching images
+	pod 'Kingfisher', '~> 4.0'
+	# Convert JSON data to object
+	pod 'ObjectMapper'
+	# Convert html text
+	pod 'SwiftSoup'
+	
+	# Pods for ORM (Object relational mapping)
+	pod 'RealmSwift'
+	pod 'RxRealm'
+	
+	# Pods for Social network
+	# Pods for Facebook
+	pod 'Bolts'
+	pod 'FBSDKCoreKit'
+	pod 'FBSDKLoginKit'
+	pod 'FBSDKShareKit'
+	# Pods for Twitter
+	pod 'TwitterKit'
+	# Pods for Google
+	pod 'GoogleSignIn', '~> 4.1'
+	# Pods for IAP
+	pod 'SwiftyStoreKit'
+	
+	target 'ASHManagerTests' do
+		inherit! :search_paths
+		# Pods for testing
+		#	  pod 'Quick'
+		#	  pod 'Nimble'
+	end
+	
+	target 'ASHManagerUITests' do
+		inherit! :search_paths
+		# Pods for testing
+		#	  pod 'Quick'
+		#	  pod 'Nimble'
+	end
+end
