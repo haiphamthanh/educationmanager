@@ -6,10 +6,9 @@
 //  Copyright © 2017 Asahi. All rights reserved.
 //
 
-import RxSwift
 import Swinject
+import RxSwift
 import IQKeyboardManagerSwift
-import Reachability
 import UserNotifications
 
 class BaseAppDelegate: UIResponder {
@@ -28,31 +27,33 @@ class BaseAppDelegate: UIResponder {
 	private var mainService: MainServiceProtocol!
 	private var registerService: RegisterAppServiceProtocol!
 	private var appCoordinator: AppCoordinatorProtocol!
-	
-	//Network checking ============
-	private var networkVC: GKLoadingViewController?
-	private var reachability: Reachability!
+	private var appThem: ThemeServiceProtocol!
 	
 	// MARK: - ================================= initSystem =================================
 	
 	// 1. Register
 	func register(container: Container, window: UIWindow) {
+		container.register(ThemeServiceProtocol.self, factory: { _ in BaseThemeService() })
 		container.register(MainServiceProtocol.self) { _ in BaseMainService() }
 		container.register(RegisterAppServiceProtocol.self) { _ in BaseRegisterApp(container: container, window: window) }
 	}
 	
 	// 2. initialize
 	func initialize(container: Container) {
+		appThem = container.sureResolve(ThemeServiceProtocol.self)
 		mainService = container.sureResolve(MainServiceProtocol.self)
 		registerService = container.sureResolve(RegisterAppServiceProtocol.self)
-		appCoordinator = CoordinatorManager.appCoordinator()
-		return reachability = Reachability()
+		return appCoordinator = container.sureResolve(AppCoordinatorProtocol.self)
+	}
+	
+	func setupGlobalThings(from container: Container) {
+		// Global setup in subclass
 	}
 }
 
 // MARK: - ================================= Extension =================================
 extension BaseAppDelegate: UIApplicationDelegate, UNUserNotificationCenterDelegate {
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		pWindow = UIWindow()
 		
 		initSystem(container: pContainer, window: pWindow!)
@@ -79,7 +80,7 @@ extension BaseAppDelegate: UIApplicationDelegate, UNUserNotificationCenterDelega
 		return mainService.appWillTerminate(application)
 	}
 	
-	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+	func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
 		return mainService.app(app, open: url, options: options)
 	}
 	
@@ -122,47 +123,28 @@ private extension BaseAppDelegate {
 	// Setup Task ----------
 	func setupTask() {
 		setupKeyboard()
-		return setupNetwork()
+		setupNetwork()
+		return setupGlobalThings(from: container)
 	}
 	
 	// Completion Task ----------
 	func completionTask() {
-		appCoordinator.start()
+		type(of: appThem.self).applyAppearanceDefaults()
+		
+		appCoordinator.startProcess()
 			.subscribe()
 			.disposed(by: disposeBag)
 	}
 	
 	// All sub Tasks --------------------------------------------------
 	func setupKeyboard() {
-		IQKeyboardManager.sharedManager().enable = true
-		IQKeyboardManager.sharedManager().enableAutoToolbar = false
-		IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
-		IQKeyboardManager.sharedManager().toolbarDoneBarButtonItemText = LocalizedString.doneButton()
+		IQKeyboardManager.shared.enable = true
+		IQKeyboardManager.shared.enableAutoToolbar = false
+		IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+		IQKeyboardManager.shared.toolbarDoneBarButtonItemText = LocalizedString.doneButton()
 	}
 	
 	func setupNetwork() {
-		NotificationCenter
-			.default
-			.addObserver(self,
-						 selector: #selector(networkDidChanged),
-						 name: Notification.Name.reachabilityChanged,
-						 object: nil)
-		
-		try? reachability.startNotifier()
-		networkVC?.change(viewType: .network)
-	}
-	
-	@objc func networkDidChanged(noti: Notification) {
-		guard let root = UIApplication.shared.keyWindow?.rootViewController, let networkVC = self.networkVC else {
-			return
-		}
-		
-		let networkStatus = Reachability()?.connection ?? .none
-		switch networkStatus {
-		case .none:
-			return root.present(networkVC, animated: true, completion: nil)
-		default:
-			return networkVC.dismiss(animated: true, completion: nil)
-		}
+		//		LoadingManager.shared.startInternetTracking()
 	}
 }

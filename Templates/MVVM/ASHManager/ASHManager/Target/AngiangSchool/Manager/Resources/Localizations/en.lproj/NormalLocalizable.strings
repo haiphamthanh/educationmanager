@@ -32,8 +32,6 @@
 "Title_Terms_Of_Use" = "Terms of Use";
 "Title_Privacy_Policy" = "Privacy Policy";
 "Title_Term_Of_Service" = "Term of Service";
-"Title_Reset_Pass" = "Reset password";
-"Title_Forgot_Pass" = "Forgot password ?";
 
 // MARK: - -------------------------------- Health Information --------------------------------
 "Title_Health_Information" = "Health Information";
@@ -51,8 +49,8 @@
 "cal_y_m_format" = "yyyy MMMM";
 
 // MARK: - -------------------------------- IntroView --------------------------------
-"IntroView.Title.Lable" = "GENKIMIRU";
-"IntroView.Title.headingLable" = "FIND YOUR BALANCE";
+"IntroView.Title.Lable" = "EDUCATION";
+"IntroView.Title.headingLable" = "ANGIANG PROVINCE";
 "IntroView.Content.Lable" = "The effect obtained by exercising every day for 40 minutes is critical in promoting healthy life span. Continuous exercise at GENKIMIRU to the thorough health management.";
 "IntroView.Content.Lable1" = "It will be free service at the first month. With easy registration, we provide daily health management advice from logs of smartphone and wearable.";
 "IntroView.Content.Lable2" = "To limit the intake of unsuitable foods for dieting,Genkimiru recommend to use diet of so-called hall foods made from fresh vegetables and fruits, whole grains, nuts, rice, omega-3 fatty acids etc.";
@@ -60,14 +58,14 @@
 "IntroView.Content.Lable4" = "Genkimiru answers questions about diet and use, Watson Assistant will answer immediately 24 hours a day, 365 days.";
 "IntroView.Content.Lable5" = "Let's participate regularly in the walking challenge of GENKIMIRU who can receive EDY and become fun and healthy. Would you like to see it for the first time? Diet to extend healthy life at Genkimiru.";
 "IntroView.Button.Register" = "Register";
-"IntroView.Button.Login" = "Login";
+"IntroView.Button.Login" = "Sign In";
 
 // MARK: - -------------------------------- Reset Pass --------------------------------
 "ResetPass.Title.Lable" = "Please enter the email address you used to register.";
 "ResetPass.Content.Lable" = "We will then send you a new password";
 "ResetPass.PlaceHoderTextFeild" = "Mail address";
 "ResetPass.SendButton.Title" = "Send";
-"Title_Forgot_Password" = "Forgot Password";
+"Title_Reset_Password" = "Reset password";
 "PinCode.Text" = "PIN Code";
 "Password.Text" = "New password";
 "Confirm.Password.Text" = "Confirm new password";

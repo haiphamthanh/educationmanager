@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,39 +15,40 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="YcC-gL-gIg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.1030209139" green="0.68767899269999999" blue="0.36409074070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clock24h" translatesAutoresizingMaskIntoConstraints="NO" id="YcC-gL-gIg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_genkimiru" translatesAutoresizingMaskIntoConstraints="NO" id="6ra-c6-Qgq">
-                                <rect key="frame" x="0.0" y="223.5" width="375" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="iB5-KK-SGp"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="Pgr-gZ-HxF">
-                                <rect key="frame" x="162" y="173.5" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Pgr-gZ-HxF">
+                                <rect key="frame" x="150" y="233.33333333333337" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Pgr-gZ-HxF" secondAttribute="height" id="50O-LE-Dck"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fp-J9-Pdn">
+                                <rect key="frame" x="93" y="374.66666666666669" width="189" height="62.666666666666686"/>
+                                <string key="text">EDUCATION 
+FOR
+ ANGIANG PROVINCE</string>
+                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="YcC-gL-gIg" secondAttribute="bottom" id="3oT-tr-9za"/>
+                            <constraint firstItem="YcC-gL-gIg" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="3oT-tr-9za"/>
+                            <constraint firstItem="2fp-J9-Pdn" firstAttribute="centerY" secondItem="YcC-gL-gIg" secondAttribute="centerY" id="6Ui-ur-L3P"/>
+                            <constraint firstItem="2fp-J9-Pdn" firstAttribute="centerX" secondItem="YcC-gL-gIg" secondAttribute="centerX" id="9vu-CB-kTP"/>
                             <constraint firstItem="YcC-gL-gIg" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="LCI-m7-LbT"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="6ra-c6-Qgq" secondAttribute="trailing" id="Lff-84-Q0b"/>
-                            <constraint firstItem="6ra-c6-Qgq" firstAttribute="centerY" secondItem="YcC-gL-gIg" secondAttribute="centerY" constant="-85" id="UaM-aG-dr1"/>
                             <constraint firstItem="YcC-gL-gIg" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="e0H-Km-gJQ"/>
-                            <constraint firstItem="6ra-c6-Qgq" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="exe-hd-Kz9"/>
-                            <constraint firstItem="6ra-c6-Qgq" firstAttribute="centerX" secondItem="YcC-gL-gIg" secondAttribute="centerX" id="f8d-or-RSG"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="YcC-gL-gIg" secondAttribute="trailing" id="lio-e8-x3O"/>
+                            <constraint firstItem="Pgr-gZ-HxF" firstAttribute="centerY" secondItem="YcC-gL-gIg" secondAttribute="centerY" multiplier="2:3" id="quV-g8-cO8"/>
                             <constraint firstItem="Pgr-gZ-HxF" firstAttribute="centerX" secondItem="YcC-gL-gIg" secondAttribute="centerX" id="tSS-7L-Zpf"/>
-                            <constraint firstItem="Pgr-gZ-HxF" firstAttribute="width" secondItem="YcC-gL-gIg" secondAttribute="width" multiplier="1:7.5" id="zL1-ls-m1d"/>
-                            <constraint firstItem="6ra-c6-Qgq" firstAttribute="top" secondItem="Pgr-gZ-HxF" secondAttribute="bottom" id="zXh-fJ-Xaq"/>
+                            <constraint firstItem="Pgr-gZ-HxF" firstAttribute="width" secondItem="YcC-gL-gIg" secondAttribute="width" multiplier="1:5" id="zL1-ls-m1d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
@@ -60,8 +59,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg_gradient" width="187" height="406"/>
-        <image name="ic_genkimiru" width="298" height="70"/>
-        <image name="ic_logo_white" width="18" height="18"/>
+        <image name="ic_clock24h" width="290" height="290"/>
+        <image name="ic_logo" width="180" height="180"/>
     </resources>
 </document>

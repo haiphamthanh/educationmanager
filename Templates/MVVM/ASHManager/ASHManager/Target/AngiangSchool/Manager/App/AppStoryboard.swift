@@ -6,67 +6,118 @@
 //  Copyright © 2017 Asahi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class AppStoryboard {
-	static let auth = "Auth"
-	static let leftmenu = "LeftMenu"
-	static let home = "Home"
-	
-	static let intro = "Intro"
-	static let advice = "Advice"
-	
-	static let registrationDefines = "RegistrationDefines"
-	static let basicInformation = "BasicInformation"
-	
-	static let dashboard = "Dashboard"
-	static let dashboardDetail = "DashboardDetail"
-	
-	static let contest = "Contest"
-	static let contestDetail = "ContestDetail"
-	
-	static let challenge = "Challenge"
-	static let walking = "Walking"
-	
-	static let photo = "PhotoManager"
-	static let map = "Map"
-	
-	static let shopEcomercial = "ShopEcomercial"
-	
-	static let notification = "Notification"
-	static let contentFeed = "ContentFeed"
-	static let contentFeedDetail = "ContentFeedDetail"
-	static let setting = "Setting"
-	static let userProfile = "UserProfile"
-	static let changePassword = "ChangePassword"
-	static let privacySetting = "PrivacySetting"
-	static let myDataSetting = "MyDataSetting"
-	static let mailMarketingSetting = "MailMarketingSetting"
-	static let notificationSetting = "NotificationSetting"
-	static let healthySetting = "HealthySetting"
-	static let conversation = "Conversation"
-	static let report = "Report"
-	static let fqa = "FQA"
-	static let guild = "Guild"
-	static let shop = "Shop"
-	static let privacyPolicySetting = "PrivacyPolicySetting"
-	static let logout = "Logout"
-	static let rewardHistory = "RewardHistory"
-	static let wearableSelection = "WearableSelection"
+extension UIViewController {
+	static func newInstance() -> Self {
+		let name = AppStoryboard.storyboardName(vc: self)
+		return instantiateFromStoryboard(name: name)
+	}
 }
 
-//enum Storyboard: String {
-//	case Auth
-//	case LeftMenu
-//	case Home
-//	case GKAuth
-//	case Intro
-//	case BasicInformation
-//	case HomeManager
-//	case DashboardDetailManager
-//	case ContestMainManager
-//	case ContestDetail
-//	case ChallengeDetailManager
-//	case ShopItem
-//	case None
-//}
+enum AppStoryboard: String {
+	case Intro = "Intro"
+	case Register = "Register"
+	case Auth = "Auth"
+	case TermOfUse = "TermOfUse"
+	case RecoverPassword = "RecoverPassword"
+	case ResetPassword = "ResetPassword"
+	case Home = "Home"
+	case UserInfo = "UserInfo"
+	
+	case Menu = "Menu"
+	case Present = "Present"
+	
+	static func storyboardName(vc: UIViewController.Type) -> String {
+		func storyboard() -> AppStoryboard {
+			let vcName = String(describing: vc)
+			
+			if intros().contains(where: { vcName == String(describing: $0) }) {
+				return Intro
+			}
+			
+			if registers().contains(where: { vcName == String(describing: $0) }) {
+				return Register
+			}
+			
+			if auths().contains(where: { vcName == String(describing: $0) }) {
+				return Auth
+			}
+			
+			if homes().contains(where: { vcName == String(describing: $0) }) {
+				return Home
+			}
+			
+			if presents().contains(where: { vcName == String(describing: $0) }) {
+				return Present
+			}
+			
+			if menus().contains(where: { vcName == String(describing: $0) }) {
+				return Menu
+			}
+			
+			if userInfo().contains(where: { vcName == String(describing: $0) }) {
+				return UserInfo
+			}
+			
+			fatalError("Cant find view controller defination")
+		}
+		
+		return storyboard().rawValue
+	}
+	
+	// INTRO
+	static func intros() -> [AnyClass] {
+		return [IntroViewController.self]
+	}
+	
+	// REGISTER
+	static func registers() -> [AnyClass] {
+		return [AccountRegisterViewController.self,
+				
+				BasicInforGenderVC.self,
+				BasicInforBirthdayVC.self,
+				BasicInforProfileVC.self,
+				BasicInforAvatarVC.self,
+				
+				BasicInforNickNameVC.self,
+				BasicInforWeightVC.self,
+				BasicInforHeightVC.self,
+				BasicInforBloodVC.self,
+				BasicInforFinishVC.self]
+	}
+	
+	// AUTH
+	static func auths() -> [AnyClass] {
+		return [ResetPasswordViewController.self,
+				RecoverPasswordViewController.self,
+				TermOfUseViewController.self,
+				AuthViewController.self,
+				ASEAuthViewController.self]
+	}
+	
+	// HOME
+	static func homes() -> [AnyClass] {
+		return [HomeViewController.self,
+				ASEHomeViewController.self,
+				HomeMainViewController.self,
+				HomeNewsViewController.self,
+				HomeVideoViewController.self]
+	}
+	
+	// PRESENT
+	static func presents() -> [AnyClass] {
+		return [PresentViewController.self]
+	}
+	
+	// MENU
+	static func menus() -> [AnyClass] {
+		return [MenuViewController.self]
+	}
+	
+	// USER_PROFILE
+	static func userInfo() -> [AnyClass] {
+		return [UserInfoViewController.self,
+				ASEUserInfoViewController.self]
+	}
+}

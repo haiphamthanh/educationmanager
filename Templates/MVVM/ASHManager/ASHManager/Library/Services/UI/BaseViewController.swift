@@ -9,20 +9,17 @@
 import RxSwift
 
 // MARK: - ########################## BASE_VIEW_CONTROLLER ##########################
-class BaseViewController: UIViewController, UINavigationControllerDelegate {
+class BaseViewController: UIViewController {
 	// MARK: - ================================= Properties =================================
-	private(set) var dialogService: PageDialogServiceProtocol?
-	private(set) var toastService: ToastServiceProtocol?
+	private(set) var alert: AlertServiceProtocol!
+	private(set) var toast: ToastServiceProtocol!
+	private(set) var image: ImageServiceProtocol!
+	
 	private var viewModel: BaseViewModelProtocol?
 	
 	let disposeBag = DisposeBag()
-	var enableNavigationBar = true {
-		didSet {
-			navigationController?.isNavigationBarHidden = !enableNavigationBar
-		}
-	}
-	var isCleanBackButtonText: Bool {
-		return true
+	var isNavBarHidden: Bool {
+		return false
 	}
 	
 	// MARK: - ================================= Use for customization =================================
@@ -41,70 +38,48 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		guard let vm = viewModel else { return }
 		
-		vm.reloadWhenViewWillAppear()
+		navigationController?.isNavigationBarHidden = isNavBarHidden
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		super.prepare(for: segue, sender: sender)
 		
-		if let container = segue.destination as? BaseViewController {
-			guard let viewModel = viewModel, let dialogService = dialogService, let toastService = toastService else { return }
-			container.initialize(viewModel: viewModel,
-								 dialogService: dialogService,
-								 toastService: toastService)
+		guard let container = segue.destination as? BaseViewController, let viewModel = viewModel else {
+			return
 		}
+		
+		container.initialize(viewModel: viewModel,
+							 alert: alert,
+							 toast: toast,
+							 image: image)
 	}
 	
-	// TODO: Check to remove code or comment
-	//	override func viewWillAppear(_ animated: Bool) {
-	//		super.viewWillAppear(animated)
-	//
-	//		navigationController?.isNavigationBarHidden = !enableNavigationBar
-	//		navigationController?.navigationBar.alpha = 1
-	//	}
-	//
-	//	override func viewDidLayoutSubviews() {
-	//		super.viewDidLayoutSubviews()
-	//
-	//		if #available(iOS 11, *) { } else {
-	//			navigationController?.isNavigationBarHidden = !enableNavigationBar
-	//			navigationController?.navigationBar.alpha = 1
-	//		}
-	//	}
+	override var prefersHomeIndicatorAutoHidden: Bool {
+		return true
+	}
 	
 	/// Use for customization
 	/// Config subcribe object view after loadview
 	func subcribeSetup() {
 		guard let vm = viewModel else { return }
 		
-		vm.dialogMessage
-			.observeOn(MainScheduler.instance)
+		vm.alert
 			.share()
-			.subscribe(onNext: { [weak self] dialogMessage in
-				self?.showDialog(message: dialogMessage)
-			})
+			.flatMap(weak: self) { instance, input -> Observable<Void> in
+				return instance.showAlert(input)
+			}
+			.bind(to: vm.didAlert)
 			.disposed(by: disposeBag)
 		
-		vm.dialogMessageVC
-			.observeOn(MainScheduler.instance)
+		vm.toast
 			.share()
-			.subscribe(onNext: { [weak self] dialogActionMessage in
-				self?.showActionDialog(message: dialogActionMessage)
-			})
-			.disposed(by: disposeBag)
-		
-		vm.toastMessage
-			.observeOn(MainScheduler.instance)
-			.share()
-			.subscribe(onNext: { [weak self] toastMessage in
-				self?.showToast(message: toastMessage)
+			.subscribe(onNext: { [weak self] message in
+				self?.toast(message)
 			})
 			.disposed(by: disposeBag)
 		
 		vm.dataSource
-			.observeOn(MainScheduler.instance)
 			.share()
 			.subscribe(onNext: { [weak self] dataSource in
 				self?.configView(with: dataSource)
@@ -115,8 +90,8 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 	/// Use for customization
 	/// Setup views after loadview
 	func setupViews() {
-		navigationController?.delegate = isCleanBackButtonText ? self : nil
-		reloadBarButton()
+		self.navigationItem.leftBarButtonItems = leftButtons()
+		self.navigationItem.rightBarButtonItems = rightButtons()
 	}
 	
 	/// Use for customization
@@ -124,11 +99,6 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 	func configView(with dataSource: Any) {
 		// Implement in subclass
 		fatalError("Miss implement configView")
-	}
-	
-	/// Use for customization
-	/// Config to init data before loadview
-	func initialize() {
 	}
 	
 	// MARK: - ================================= VIEW SOURCE =================================
@@ -157,10 +127,6 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 		return ""
 	}
 	
-	class func storyNameProvider() -> String {
-		return ""
-	}
-	
 	func rightButtons() -> [UIBarButtonItem]? {
 		return []
 	}
@@ -176,169 +142,39 @@ class BaseViewController: UIViewController, UINavigationControllerDelegate {
 
 // MARK: - ########################## Final ##########################
 extension BaseViewController {
-	var isViewModelAvailable: Bool {
-		return viewModel != nil
-	}
-	
-	func reloadBarButton() {
-		if let rightButtons = rightButtons() {
-			navigationItem.setRightBarButtonItems(rightButtons, animated: true)
-		}
+	func alert(title: String? = nil, message: String) -> Observable<Void> {
+		let alertInput = AlertInput(title: title, message: message)
 		
-		if let leftButtons = leftButtons() {
-			navigationItem.setLeftBarButtonItems(leftButtons, animated: true)
-		}
+		return showAlert(alertInput)
 	}
 	
-	//TODO: HaiPT15
-	func showCamera(_ sender: UITapGestureRecognizer) -> Observable<UIImage> {
-		//TODO Show camera
-		return showSelectPhoto()
-	}
-	
-	func showSelectPhoto(_ sender: UITapGestureRecognizer) -> Observable<UIImage> {
-		return showSelectPhoto()
-	}
-	
-	func showSelectPhoto() -> Observable<UIImage> {
-		return Observable.create({ [weak self] obserable -> Disposable in
-			guard let strongSelf = self else {
-				return Observable<UIImage>.never().subscribe()
-			}
-			
-			let action = strongify(self, closure: { (instance, output: AbstractPopUpOutput) in
-				guard let output = output as? PhotoPopUpInput else { return }
-				obserable.onNext(output.image)
-			})
-			strongSelf.showActionDialog(vcType: .photoSelection,
-										params: nil,
-										action: action)
-			
-			return Disposables.create()
-		})
-	}
-	
-	func showOKDialog(title: String? = nil, message: String, action: (() -> Void)? = nil) {
-		let button = PageDialogButton(title: LocalizedString.localizedString(input: "OK"),
-									  action: action)
-		let messageDialog = PageDialogMessage(title: title,
-											  message: message,
-											  buttons: [button])
-		showDialog(message: messageDialog)
-	}
-	
-	func showConfirmDialog(title: String? = nil, message: String,
-						   okAction: @escaping (() -> Void),
-						   cancelAction: @escaping (() -> Void)) {
-		let ok = PageDialogButton(title: LocalizedString.localizedString(input: "OK"), action: okAction)
-		let cancel = PageDialogButton(type: .cancel, title: LocalizedString.localizedString(input: "Cancel"), action: cancelAction)
-		let messageDialog = PageDialogMessage(title: title,
-											  message: message,
-											  buttons: [ok, cancel])
-		
-		showDialog(message: messageDialog)
-	}
-	
-	func showActionDialog(title: String? = nil, message: String? = nil, vcType: PopUpViewControllerType, params: Dictionary<String, Any>?, action: ((AbstractPopUpOutput) -> ())? = nil) {
-		let messageDialog = PageDialogActionMessage(type: vcType,
-													params: params,
-													title: title,
-													message: message,
-													action: action)
-		showActionDialog(message: messageDialog)
-	}
-	
-	func showActionDialogVCOnly(title: String? = nil, message: String? = nil, vcType: PopUpViewControllerType, params: Dictionary<String, Any>?) {
-		let messageDialog = PageDialogActionMessage<AbstractPopUpOutput>(type: vcType,
-													params: params,
-													title: title,
-													message: message,
-													confirmButtons: false)
-		showActionDialog(message: messageDialog)
-	}
-	
-	func showToast(message: String) {
-		toastService?.toast(message: message)
+	func toast(_ message: String) {
+		return toast.show(message: message)
 	}
 }
 
 // MARK: - ########################## BaseViewProtocol ##########################
 extension BaseViewController: BaseViewProtocol {
 	func initialize(viewModel: BaseViewModelProtocol,
-					dialogService: PageDialogServiceProtocol,
-					toastService: ToastServiceProtocol) {
+					alert: AlertServiceProtocol,
+					toast: ToastServiceProtocol,
+					image: ImageServiceProtocol) {
 		self.viewModel = viewModel
-		self.dialogService = dialogService
-		self.toastService = toastService
-		
-		initialize()
+		self.alert = alert
+		self.toast = toast
+		self.image = image
 	}
 }
 
 // MARK: - ########################## Private ##########################
 private extension BaseViewController {
-	private func configView(with dataSource: Any?) {
+	func configView(with dataSource: Any?) {
 		if let dataSource = dataSource {
 			configView(with: dataSource)
 		}
 	}
 	
-	private func showDialog(message: PageDialogMessage) {
-		dialogService?.show(message: message)
-	}
-	
-	private func showActionDialog(message: PageDialogActionMessage<AbstractPopUpOutput>) {
-		dialogService?.show(vcType: message.type,
-							params: message.params,
-							confirmButtons: message.confirmButtons)
-	}
-}
-
-// MARK: - ########################## SLIDE_MENU ##########################
-class BaseSlideMenuViewController: BaseViewController {
-	// MARK: +++======== Menu ========+++
-	var leftIcon = "ic_menu_black_24dp"
-	var rightIcon = "ic_notifications_black_24dp"
-	var enableSwipe = true
-	var enableRight: Bool {
-		return false
-	}
-	var enableLeft: Bool {
-		return false
-	}
-	
-	// MARK: - ================================= Init view =================================
-	/// Use for customization
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		configForSlideMenu()
-	}
-	
-	// MARK: - ================================= Private =================================
-	private func configForSlideMenu() {
-		removeNavigationBarItem()
-		
-		if enableLeft {
-			if enableSwipe {
-				slideMenuController()?.addLeftGestures()
-			}
-			
-			addLeftBarButtonWithImage(UIImage(named: leftIcon)!)
-		}
-		
-		if enableRight {
-			if enableSwipe {
-				slideMenuController()?.addRightGestures()
-			}
-			
-			addRightBarButtonWithImage(UIImage(named: rightIcon)!)
-		}
-	}
-	
-	private func removeNavigationBarItem() {
-		slideMenuController()?.removeLeftGestures()
-		slideMenuController()?.removeRightGestures()
-		navigationItem.rightBarButtonItem = nil
+	func showAlert(_ input: AlertInput) -> Observable<Void> {
+		return alert.show(input)
 	}
 }

@@ -7,15 +7,18 @@
 //
 
 import RxSwift
+import Swinject
 
 enum PresentType: Int {
 	case push
 	case present
+	case updateRoot
 }
 
 /// Base abstract coordinator generic over the return type of the `start` method.
 class BaseCoordinator<ResultType> {
 	private var coorBag: AdapterCoordinator?
+	private(set) var result: ResultType!
 	
 	/// Typealias which will allows to access a ResultType of the Coordainator by `CoordinatorName.CoordinationResult`.
 	typealias CoordinationResult = ResultType
@@ -80,48 +83,41 @@ class BaseCoordinator<ResultType> {
 	}
 }
 
+// MARK: - ########################## PUBLIC FUNCTION LIST ##########################
 extension BaseCoordinator {
-	func start() -> Observable<ResultType> {
-		if let vc = coorBag?.view as? UIViewController {
-			if let window = coorBag?.window {
-				// Config for root view
-				let nav = coorBag?.navService.selectedNavigationController
-				window.rootViewController = nav
-				window.makeKeyAndVisible()
-			} else {
-				// Config for none root view
-				switch presentType {
-				case .push:
-					coorBag?.navService.pushViewController(viewController: vc, animated: true)
-				case .present:
-					coorBag?.navService.presentViewController(viewController: vc, animated: true, completion: nil)
-				}
-			}
+	//MARK: Getters
+	static var container: Container {
+		return AppDelegate.shared().container
+	}
+	
+	var viewController: UIViewController {
+		guard let vc = coorBag?.view as? UIViewController else {
+			fatalError("Can't find view controller for. May be we current in story")
 		}
 		
-		return doAction(viewModel: coorBag?.viewModel)
+		return vc
 	}
 	
-	// Use for base to resolve instance Container+Extension.swift
-	func setup(coorBag: AdapterCoordinator) {
-		self.coorBag = coorBag
+	
+	//MARK: Functions
+	// Finish the storyboard action
+	func doneStory() -> Observable<Void> {
+		return didFinishStory()
 	}
 	
-	// Use for base to coordinate screen
-	func push(params: Dictionary<String, Any>?) {
-		coorBag?.viewModel.push(params: params)
-	}
-	
-	// Use when finish the storyboard
 	func doneStory(params: Dictionary<String, Any>?) -> Observable<Void> {
-		if let rootNav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
-			rootNav.viewControllers.removeAll()
-		}
-		
-		return Observable.never()
+		return didFinishStory(params: params)
 	}
 	
-	// Back to previous
+	// Navigation actions
+	func navigationShouldAnimation(at point: CGPoint) {
+		guard let nav = coorBag?.navService.selectedNavigationController as? NavigationManager else {
+			return
+		}
+		
+		nav.shouldAnimation(at: point)
+	}
+	
 	func backToPreviousIfNeeded() {
 		guard let vc = coorBag?.view as? UIViewController else {
 			return
@@ -131,11 +127,68 @@ extension BaseCoordinator {
 	}
 }
 
+// MARK: - ########################## ONLY USE FOR BASE CONFIG ##########################
+extension BaseCoordinator {
+	// Start coordinating action
+	func startProcess() -> Observable<Void> {
+		return start()
+			.map({ [weak self] result in
+				self?.result = result
+			})
+	}
+	
+	func start() -> Observable<ResultType> {
+		if let coorBag = coorBag, let vc = coorBag.view as? UIViewController {
+			func driverPusing() {
+				switch presentType {
+				case .push:
+					return coorBag.navService.push(viewController: vc, animated: true)
+				case .present:
+					return coorBag.navService.present(viewController: vc, animated: true, completion: nil)
+				case .updateRoot:
+					return coorBag.navService.resetStack(by: [vc], animated: true)
+				}
+			}
+			
+			if !coorBag.isStoryInit {
+				driverPusing()
+			}
+		}
+		
+		return doAction(viewModel: coorBag?.viewModel)
+	}
+	
+	// Resolve instance Container+Extension.swift
+	func setup(coorBag: AdapterCoordinator) {
+		self.coorBag = coorBag
+	}
+	
+	// Push data at time when screens is transiting
+	func push(params: Dictionary<String, Any>?) {
+		coorBag?.viewModel.push(params: params)
+	}
+	
+	// Finish story
+	func didFinishStory(params: Dictionary<String, Any>? = nil) -> Observable<Void> {
+		let rootVC = UIApplication.shared.keyWindow?.rootViewController
+		if let rootNav = rootVC as? UINavigationController {
+			while rootNav.viewControllers.count > 0 {
+				rootNav.viewControllers.removeLast()
+			}
+		}
+		
+		rootVC?.removeFromParent()
+		return Observable.never()
+	}
+}
+
+// MARK: ########################## ONLY USE FOR BASE CONFIG ##########################
 class AdapterCoordinator {
 	fileprivate let window: UIWindow?
 	fileprivate weak var view: BaseViewProtocol!
 	fileprivate let navService: BasicNavigationServiceProtocol
 	fileprivate weak var viewModel: BaseViewModelProtocol!
+	fileprivate let isStoryInit: Bool!
 	
 	init(window: UIWindow? = nil,
 		 viewModel: BaseViewModelProtocol,
@@ -146,169 +199,21 @@ class AdapterCoordinator {
 		self.viewModel = viewModel
 		self.navService = navService
 		
-		guard let vc = view as? UIViewController, window != nil else {
+		guard let vc = view as? UIViewController, window != nil, window?.rootViewController == nil else {
+			self.isStoryInit = false
 			return
 		}
 		
-		let navigation = GKExNavigationController(rootViewController: vc)
-		navService.setupWithNavigationController(navigationController: navigation)
+		self.isStoryInit = true
+		
+		// Setup root only storyboard switch
+		let nav = NavigationManager(rootViewController: vc)
+		navService.setup(with: nav)
+		window?.rootViewController = nav
+		window?.makeKeyAndVisible()
 	}
 	
 	deinit {
 		print("\(self) is deinit")
 	}
-	
-	// Change if window is changed
-	//	let navigation = GKExNavigationController(rootViewController: viewController)
-	//	nav.setupWithNavigationController(navigationController: navigation)
-	
-	
-	//	var appRegister: RegisterAppServiceProtocol {
-	//		if let pAppRegister = pAppRegister {
-	//			return pAppRegister
-	//		}
-	//
-	//		fatalError("Miss for RegisterAppServiceProtocol for \(self)")
-	//	}
-	// No need to use view model for this time so that I will private this one
-	//	private var viewModel: BaseViewModelProtocol {
-	//		if let pViewModel = pViewModel {
-	//			return pViewModel
-	//		}
-	//
-	//		fatalError("Miss for BaseViewModelProtocol for \(self)")
-	//	}
-	//	var viewController: BaseViewController {
-	//		if let pViewController = pViewController {
-	//			return pViewController
-	//		}
-	//
-	//		fatalError("Miss viewController for \(self)")
-	//	}
-	//	var navigationService: BasicNavigationServiceProtocol {
-	//		if let pNavigationService = pNavigationService {
-	//			return pNavigationService
-	//		}
-	//
-	//		fatalError("Miss BasicNavigationServiceProtocol for \(self)")
-	//	}
-	//	var useAsRoot: Bool {
-	//		return false
-	//	}
-	//
-	//	private var pAppRegister: RegisterAppServiceProtocol!
-	//	private var pViewModel: BaseViewModelProtocol!
-	//	private var pViewController: BaseViewController!
-	//	private var pNavigationService: BasicNavigationServiceProtocol!
-	//
-	//	private lazy let navigation = GKExNavigationController(rootViewController: viewController)
-	//	private(set) var window: UIWindow?
-	//	private(set) weak var delegate: BaseCoordinatorDelegate?
-	
-	// Option for init in subclass
-	//	func initialize() {
-	//	}
-	
-	//	override func start() -> Observable<T> {
-	//		if isRoot, let window = window {
-	//			// Warning: Don't bring to Initialize because we only need update navigation root if start coordinate
-	//			pNavigationService.setupWithNavigationController(navigationController: navigation)
-	//			window.rootViewController = navigation
-	//			window.makeKeyAndVisible()
-	//
-	//			return Observable.never()
-	//		}
-	
-	//		return pushToViewControler(viewController)
-	//		return Observable<T>.never()
-	//	}
 }
-
-//extension AdapterCoordinator: ViewModelCoordinatorDelegateAdapter {
-//	func didTokenExpired(params: Dictionary<String, Any>?) -> Observable<Void> {
-//		return coordinateToIntroduction()
-//	}
-//}
-
-// MARK: - ########################## Final ##########################
-//extension AdapterCoordinator: BaseCoordinatorProtocol {
-//	func initialize(appRegister: RegisterAppServiceProtocol,
-//					viewController: BaseViewController?,
-//					navigationService: BasicNavigationServiceProtocol?,
-//					window: UIWindow?) {
-//		self.pAppRegister = appRegister
-//		self.pViewController = viewController
-//		self.pViewModel = viewController?.viewModelWraper(type: BaseViewModelProtocol.self)
-//		self.pNavigationService = navigationService
-//		self.window = window
-//
-//		initialize()
-//	}
-//
-//	func setDelegate(_ delegate: BaseCoordinatorDelegate) {
-//		self.delegate = delegate
-//	}
-//
-//	func coordinateToIntroduction() -> Observable<Void> {
-//		let introCoordinator = appRegister.introCoordinator()
-//		return coordinate(to: introCoordinator)
-//	}
-//}
-
-//// MARK: - ########################## Private ##########################
-//private extension AdapterCoordinator {
-//	func canByPassLogin() -> Bool {
-//		let whiteList = [TermOfUseViewController.self,
-//						 BasicInformationViewController.self,
-//						 RecoverPasswordViewController.self,
-//						 ResetPasswordViewController.self]
-//
-//		return whiteList.contains(where: { $0 == type(of: viewController) })
-//	}
-//}
-//
-//// MARK: - ########################## CoordinatorDelegate ##########################
-//
-//// MARK: ####### INTRODUCTION #######
-//extension AdapterCoordinator: IntroCoordinatorDelegate {
-//}
-//
-//// MARK: ####### REGISTER #######
-//extension AdapterCoordinator: BasicInformationCoordinatorDelegate {
-//}
-//
-//extension AdapterCoordinator: RegisterCoordinatorDelegate {
-//	func didRegistedUser(params: Dictionary<String, Any>?) -> Observable<Void> {
-//		return coordinateToHome(sender: self)
-//	}
-//}
-//
-//// MARK: ####### AUTH #######
-//extension AdapterCoordinator: AuthCoordinatorDelegate {
-//	var isLoggedIn: Bool {
-//		return false
-//	}
-//
-//	func didAuthenticated(params: Dictionary<String, Any>?) -> Observable<Void> {
-//		return coordinateToHome(sender: self, params: params)
-//	}
-//}
-//
-//extension AdapterCoordinator: GKAuthCoordinatorDelegate {
-//}
-//
-//// MARK: ####### TERM_OF_USE #######
-//extension AdapterCoordinator: TermOfUseCoordinatorDelegate {
-//}
-//
-//// MARK: ####### RECOVER_PASSWORD #######
-//extension AdapterCoordinator: RecoverPasswordCoordinatorDelegate {
-//}
-//
-//// MARK: ####### RESET_PASSWORD #######
-//extension AdapterCoordinator: ResetPasswordCoordinatorDelegate {
-//}
-//
-//// MARK: ####### HOME #######
-//extension AdapterCoordinator: HomeCoordinatorDelegate {
-//}

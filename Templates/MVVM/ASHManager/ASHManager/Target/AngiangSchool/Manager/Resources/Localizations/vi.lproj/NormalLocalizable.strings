@@ -6,32 +6,75 @@
  Copyright © 2017 Asahi. All rights reserved.
  */
 
-// MARK: - ================================= View title =================================
-"Title_Home" = "Trang chủ";
-"Title_Marked_Place" = "Địa điểm đã đánh dấu";
-"Title_Local_Sharing" = "Vị trí đã share";
-"Title_Offline_Map" = "Bản đồ offline";
-"Title_Plan" = "Danh sách kế hoạch";
-"Title_Your_Trip" = "Lịch sử chuyến đi";
-"Title_Setting" = "Cài đặt";
-"Title_Help_Feedback" = "Trợ giúp & phản hồi";
-"Title_Term_Of_Service" = "Điều khoản dịch vụ";
-"Title_Reset_Pass" = "パスワードのリセット";
+// MARK: - -------------------------------- HOME --------------------------------
+"Title_Home" = "Home";
 
-// MARK: - ================================= IntroView =================================
-"IntroView.Title.Lable" = "GENKIMIRU";
-"IntroView.Title.headingLable" = "FIND YOUR BALANCE";
-"IntroView.Content.Lable" = "毎日40分運動することで得ら れる効果は健康寿命促進にあた って非常に重要です。GENKI-MIRUで継続的に運動して健康 管理を万全に。";
-"IntroView.Button.Register" = "登録する";
-"IntroView.Button.Login" = "ログイン";
+// MARK: - -------------------------------- Google MAP --------------------------------
+"Title_Text_Place_Holder" = "Please enter your address here.";
+"Title_Current_Location" = "Current Location";
 
-// MARK: - ================================= Reset Pass =================================
-"ResetPass.Title.Lable" = "パスワードを忘れた場合";
-"ResetPass.Content.Lable" = "次の情報を入力すると、パスワードの変更方法について GENKIMIRUからメールが送信されます。";
-"ResetPass.PlaceHoderTextFeild" = "Emailを入力して下さい";
-"ResetPass.SendButton.Title" = "送る";
+// MARK: - -------------------------------- Authentication --------------------------------
+"Title_Login" = "Login";
+"Title_Facebook_Login" = "Facebook Login";
+"Title_Google_Login" = "Google Login";
+"Title_Agree_Term_Of_Use" = "I agree %@ and %@";
+"Title_Policy" = "privacy policy";
+"Title_Terms" = "terms of use";
+"Title_Forgot_Password" = "Forgot password";
+"Title_Input_Username" = "User name";
+"Title_Input_Username_Or_Email" = "Mail address or user name";
+"Title_input_password" = "Password";
+"Title_email_address" = "Email Address";
+"Title_password" = "Password";
+"Title_Send_Email" = "Please send email to verify";
+"Title_Input_Email" = "Please input email";
+"Title_Send" = "Send";
+"Title_Terms_Of_Use" = "Terms of Use";
+"Title_Privacy_Policy" = "Privacy Policy";
+"Title_Term_Of_Service" = "Term of Service";
 
-// MARK: - ================================= Register =================================
+// MARK: - -------------------------------- Health Information --------------------------------
+"Title_Health_Information" = "Health Information";
+"Title_Register_User_Infomation" = "Register";
+"Title_Infomation_Year" = "";
+"Title_Infomation_Month" = "";
+"Title_Infomation_Day" = "";
+"Title_Health_Information_Birthday" = "/";
+"year_month_date_format" = "yyyy/MM/dd";
+"year_month_date_contest_format" = "yyyy/MM/dd";
+"year_month_date_time_format" = "yyyy MMM dd, HH:mm a";
+"year_month_date_time_formatV2" = "yyyy-MM-dd HH:mm:ss";
+"cal_e_y_M_d_format" = "EEEE, yyyy MMM dd";
+"cal_y_M_d_format" = "yyyy MMMM dd";
+"cal_y_m_format" = "yyyy MMMM";
+
+// MARK: - -------------------------------- IntroView --------------------------------
+"IntroView.Title.Lable" = "EDUCATION";
+"IntroView.Title.headingLable" = "ANGIANG PROVINCE";
+"IntroView.Content.Lable" = "The effect obtained by exercising every day for 40 minutes is critical in promoting healthy life span. Continuous exercise at GENKIMIRU to the thorough health management.";
+"IntroView.Content.Lable1" = "It will be free service at the first month. With easy registration, we provide daily health management advice from logs of smartphone and wearable.";
+"IntroView.Content.Lable2" = "To limit the intake of unsuitable foods for dieting,Genkimiru recommend to use diet of so-called hall foods made from fresh vegetables and fruits, whole grains, nuts, rice, omega-3 fatty acids etc.";
+"IntroView.Content.Lable3" = "Because Genkimiru recommends a healthy diet, we manage well about quality and efficiency about sleep. Sleeping is the most refreshing activity that the individual is going to do.";
+"IntroView.Content.Lable4" = "Genkimiru answers questions about diet and use, Watson Assistant will answer immediately 24 hours a day, 365 days.";
+"IntroView.Content.Lable5" = "Let's participate regularly in the walking challenge of GENKIMIRU who can receive EDY and become fun and healthy. Would you like to see it for the first time? Diet to extend healthy life at Genkimiru.";
+"IntroView.Button.Register" = "Register";
+"IntroView.Button.Login" = "Sign In";
+
+// MARK: - -------------------------------- Reset Pass --------------------------------
+"ResetPass.Title.Lable" = "Please enter the email address you used to register.";
+"ResetPass.Content.Lable" = "We will then send you a new password";
+"ResetPass.PlaceHoderTextFeild" = "Mail address";
+"ResetPass.SendButton.Title" = "Send";
+"Title_Reset_Password" = "Forgot Password";
+"PinCode.Text" = "PIN Code";
+"Password.Text" = "New password";
+"Confirm.Password.Text" = "Confirm new password";
+"Change.Button.Text" = "Change";
+"OldPassword.Text" = "Old password";
+"Title_Change_Password" = "Change password";
+"ChangePassword.Button.Text" = "Change";
+
+// MARK: - -------------------------------- Register --------------------------------
 "Register.Beer.NaviTitle" = "健康情報";
 "Register.Beer.Title.Label" = "どのくらいの頻度で飲むのですか?";
 "Register.Smoke.NaviTitle" = "健康情報";
@@ -40,3 +83,457 @@
 "Register.Beer.CheckBoxTitle2.Label" = "あまりない";
 "Register.Beer.CheckBoxTitle3.Label" = "定期的に";
 "Register.Beer.CheckBoxTitle4.Label" = "重い中毒";
+"Register.Button.Next" = "Next";
+"Register.Button.SkipAll" = "Skip all";
+"Register.Button.Register" = "Register";
+"Title_BirthDay" = "Birthday";
+"Title_Device" = "Do you have a wearable device or application?";
+"Title_Device_Description" = "Some information is automatically entered when synchronized";
+"Title_Other_Wearable_Button" = "Other wearable";
+"Title_Smart_Phone_Button" = "Smart phone";
+"Title_Gobe" = "GoBe";
+"Title_Fitbit" = "Fitbit";
+"Title_Weight" = "Weight";
+"Popup_Name" = "Please enter your GOBE account";
+"Nike_Button" = "Nike+ FuelBand SE";
+"Acer_Liquid_Leap" = "Acer Liquid Leap+";
+"Xiaomi" = "Xiaomi Mi Band 1S";
+"Note" = "※ Please synchronize data with Apple healthkit.";
+"Gender" = "Gender";
+"Height" = "Height";
+"Blood_Type" = "Blood type";
+"Blood_Pressure" = "Blood pressure";
+"Text_Question" = "Do you drink alcohol?";
+"CheckBox1" = "Every day";
+"CheckBox2" = "5 to 6 days every week";
+"CheckBox3" = "3 to 4 days every week";
+"CheckBox4" = "1 to 2 days every week";
+"CheckBox5" = "1 to 3 days every month";
+"CheckBox6" = "Quit drinking (more than 1 year)";
+"CheckBox7" = "No alcohol";
+"Drink_Text_Question" = "How often do you drink at once?";
+"Drink_Popup_CheckBox1" = "Less than 180 ml per day";
+"Drink_Popup_CheckBox2" = "180 ~ 360 ml per day";
+"Drink_Popup_CheckBox3" = "360 ~ 540 ml per day";
+"Drink_Popup_CheckBox4" = "540 ~ 720 ml per day";
+"Drink_Popup_CheckBox5" = "720 ~ 900 ml per day";
+"Drink_Popup_CheckBox6" = "More than 900 ml per day";
+
+"Smoke_Text_Question" = "Do you smoke cigarettes?";
+"Smoke_Checkbox1" = "No smoking";
+"Smoke_Checkbox2" = "Sometimes";
+"Smoke_Checkbox3" = "Every day";
+
+"Smoke_Popup_Text_Question" = "How many cigarettes do you smoke a day?";
+"Smoke_Popup_Checkbox1" = "1~10 cigarettes per day";
+"Smoke_Popup_Checkbox2" = "11~20 cigarettes per day";
+"Smoke_Popup_Checkbox3" = "More than 21 cigarettes per day";
+
+"Surgery_Text_Question" = "Have you ever made a serious illness or big surgery?";
+"Surgery_Text_Answer_Yes" = "Have gotten a serious illness or big surgery";
+"Surgery_Text_Answer_No" = "Haven't gotten a serious illness or big surgery";
+"Yes" = "Yes";
+"No" = "No";
+
+"Health_Text_Question" = "What is the current state of health?";
+"Health_Checkbox1" = "Very good";
+"Health_Checkbox2" = "Good";
+"Health_Checkbox3" = "Not bad";
+"Health_Checkbox4" = "Bad";
+
+"Health_VeryGood" = "The current state of health is very good";
+"Health_Good" = "The current state of health is good";
+"Health_Notbad" = "The current state of health is not bad";
+"Health_Bad" = "The current state of health is bad";
+
+"Nickname_Text_Question" = "Your nickname (You can join the contest with your nickname)";
+"Nick_Name" = "Nickname";
+
+"Avatar_Text_Choose_Pic" = "Please choose a picture…";
+"Avatar_Text_Take_Pic" = "Take a picture";
+"Avatar_Text_Select_Pic" = "Select photos";
+
+"Create_Account_Text" = "Create account";
+"Agreement_Text" = "I agree to the Term of use and Privacy Policy";
+"Placeholder_UserName" = "Username";
+"Placeholder_Mail" = "Mail address";
+"Placeholder_Password" = "Password";
+"Placeholder_FirstName" = "First name";
+"Placeholder_LastName" = "Last name";
+"Note_Create_Account" = "※ If you have a foreign name please enter it in half-width Roman character";
+
+"Register_Text_Noti" = "Please press Register button to complete registration";
+
+"Finish_Noti" = "Congratulation! \nYou have been successfully registered.";
+
+"Title_This_Month" = "(This month)";
+"Title_Money" = "¥";
+
+"Title_Name_Of_Food" = "Name of food";
+"Title_Protein" = "Protein";
+"Title_Fat" = "Fat";
+"Title_Carbonhidrate" = "Carbonhidrate";
+"Title_Calories" = "Calories";
+"Title_Record" = "RECORD";
+"Title_Add_Food" = "ADD FOOD";
+"Title_Calories_IN" = "Calories IN";
+"Title_Calories_OUT" = "Calories_OUT";
+"Title_Attachment" = "Attachment";
+"Title_Search" = "Search";
+"Title_Language" = "en-us";
+
+
+// MARK: - -------------------------------- Paid Plan --------------------------------
+"Paid_Plan_Navi_Title" = "Select paid plan";
+"Paid_Plan_Header_Title_Label" = "Please Select a paid plan";
+"Paid_Plan_Selected_Pay_Title" = "You're using trial package:";
+"Paid_Plan_Selected_Pay_Default_Title" = "You're using type of paid plan:";
+"Paid_Plan_Option_Pay_Title" = "Please select the subscription that suits you";
+"Paid_Plan_Option_Pay_Default_Title" = "You can choose a pay plan to extend use time:";
+"Paid_Plan_Expire" = "Automatically renew in %@";
+"Paid_Plan_Date_Format" = "MM-dd-yyyy";
+"Paid_Plan_Detail_Navi_Title" = "Plan detail";
+"Paid_Plan_Days_Remain" = "days remains";
+"Paid_Plan_Button_Buy" = "Buy";
+"Paid_Plan_Button_Exchange" = "Change";
+
+// MARK: - -------------------------------- Setting --------------------------------
+"Setting_Tittle" = "Setting";
+"Setting_Change_Password" = "Change password";
+"Setting_Privacy_Setting" = "Privacy setting";
+"Setting_Health_Data_Source" = "Health data source";
+"Setting_Favorite_Content" = "Favorite content";
+"Setting_Set_Email_Marketing" = "Set email marketing";
+"Setting_Push_Notification_Setting" = "Push notification setting";
+"Setting_Reward_History" = "Reward history";
+"Setting_Select_Paid_Plan" = "Select Paid Plan";
+"Setting_WATSON" = "Watson Conversation";
+"Setting_FQA" = "FAQ";
+"Setting_Advice" = "Advice";
+"Setting_Report_Bugs" = "Contact Us";
+"Setting_Use" = "How to use this app";
+"Setting_ToU_PP" = "Terms of use & Privacy Policy";
+"Setting_Logout" = "Log out";
+"Setting_Logout_Message" = "Are you sure you want to log out?";
+"Setting_Change_Fitbit_Confirm" = "If you switch health source, there's a possibility that a part of your today data could not take over. Are you sure you want to switch your health source?";
+
+// MARK: - -------------------------------- Privacy Setting --------------------------------
+"Privacy_Setting_Tittle" = "Privacy setting";
+"Privacy_Setting_Health" = "Do you allow application use your health information to give the advice?";
+"Privacy_Setting_Profile" = "Do you allow application store your GOBE or FITBIT account to get health information?";
+
+// MARK: - -------------------------------- Email Setting --------------------------------
+"Email_Setting_Tittle" = "Email marketing setting";
+"Email_Setting_Receive_Mail_Title" = "Receive marketing emails";
+"Email_Setting_Current_Title" = "Current email:";
+
+// MARK: - -------------------------------- Notification Setting --------------------------------
+"Notification_Setting_Tittle" = "Push notification setting";
+"Notification_Setting_Label_01" = "Accept Push notifications";
+"Notification_Setting_Label_02" = "Announcement from GENKI";
+"Notification_Setting_Label_03" = "GENKI AI Advices";
+"Notification_Setting_Label_04" = "Contest notification";
+"Updated_Notification_Successfully" = "Updated Notification Successfully";
+
+// MARK: - -------------------------------- Dashboard --------------------------------
+"Dashboard_Tittle" = "Dashboard";
+"Steps" = "Steps";
+"steps" = "steps";
+"Min" = "Min";
+"Max" = "Max";
+"Energy_Balance" = "Energy balance";
+"Heart_Rate" = "Heart rate";
+"HeartRate_Average" = "Average";
+"Sleep" = "Sleep";
+"Stress_Level" = "Stress level";
+"Stress" = "Stress";
+"Weight" = "Weight";
+"BMI" = "BMI";
+"Water" = "Water";
+"Nutrition" = "Nutrition";
+"Chat_with_WATSON" = "Chat with WATSON";
+"Days" = "Days";
+"Weeks" = "Weeks";
+"Months" = "Months";
+"Now_Button_Title" = "Now";
+"Advice_Button_Title" = "Advice";
+"Title_Shop_EC" = "Shop !";
+
+"Total" = "Total";
+"Month_Total" = "Month Total";
+"Week_Total" = "Week Total";
+"Year_Total" = "Year Total";
+"Warning_Message" = "you are viewing data from %@ device. so you can not use manual input.";
+"Fitbit" = "Fitbit";
+"GOBE" = "GOBE";
+"Water_level_Low" = "Low";
+"Water_level_Normal" = "Normal";
+"Summarize" = "Summarize";
+"Average" = "Average";
+"Chart_Data_Loading" = "Loading...";
+"No_Chart_Data_Available" = "No Data.";
+"No_Advice_Data" = "No advice";
+"Dashboard_Coin_Title" = "G-Healthcare Point";
+"Dashboard_Money_Title" = "Economic benefits of medical cost containment";
+"No_Data" = "No Data";
+
+"Stress_Level_Extreme" = "Extreme";
+"Stress_Level_High" = "High";
+"Stress_Level_Moderate" = "Moderate";
+"Stress_Level_Low" = "Low";
+"Stress_Level_No" = "No stress";
+"Stress_Current_Stress_Level_Title" = "(Current stress level)";
+"Stress_Hour_Unit" = "h ";
+"Stress_Minute_Unit" = "min";
+"Stress_No_GOBE_Title" = "No Stress Data.\n※It will be displayed automatically\n when using wearable of GoBe 2.";
+
+"Sleep_Level_Deep" = "deep";
+"Sleep_Level_Light" = "light";
+"Sleep_Level_REM" = "REM";
+"Sleep_Level_Falling" = "falling";
+"Sleep_No_Data" = "There is no graph data";
+"Sleep_Manual_Input_Title" = "Manual input";
+"Sleep_Rating_Title" = "Please rate your sleep yourself";
+"Sleep_Suggestion_Title" = "Suggestion";
+"Sleep_Hours_Unit" = "hours";
+
+"Weight_Level_Underweight" = "Underweight";
+"Weight_Level_Normal" = "Normal";
+"Weight_Level_Pre_obesity" = "Pre-obesity";
+"Weight_Level_Obesity_I" = "Obesity I";
+"Weight_Level_Obesity_II" = "Obesity II";
+"Weight_Level_Obesity_III" = "Obesity III";
+"Weight_Height_Title" = "Height";
+"Weight_Weight_Title" = "Weight";
+"Weight_Record_Button_Title" = "Record";
+"Weight_Minimum_Title" = "Minimum";
+"Weight_Maximum_Title" = "Maximum";
+"Weight_Average_Weight_Title" = "Average weight";
+"Weight_Average_BMI_Title" = "Average BMI";
+"Weight_BMI_Minimum_Title" = "Minimum BMI";
+"Weight_BMI_Maximum_Title" = "Maximum BMI";
+
+"Energy_Balance_Advice_Info" = "Your calorie intake shown in this graph is provisional value. Please see gobe2 application to check your definitive value";
+"Energy_Kcal_In_Title" = "calories IN";
+"Energy_Kcal_Out_Title" = "calories OUT";
+"Title_Carb" = "Carbonhidrate";
+"Manual_Title" = "Manual";
+"Update_Manual_Successful_Message" = "Data has been updated successfully";
+"Update_Manual_Failed_Message" = "Update Manual Failed";
+"No_Record_Title" = "No Record";
+"My_Data_Error_Title" = "Need time for data synchronization. Please wait a moment";
+// MARK: - -------------------------------- Contests --------------------------------
+"Contests_Tittle" = "Contests";
+"Contests_Currents" = "Currents";
+"Contests_Privates" = "Privates";
+"Contests_Publics" = "Publics";
+"Contests_Recommend" = "Recommend";
+"Contests_History" = "History";
+"Contests_Start_Date" = "Start Date";
+"Contests_End_Date" = " End Date ";
+"Contests_Create_Date" = " Cr.Date ";
+"Contests_Won_Label" = "Won";
+"Contests_Joined_Label" = "Joined";
+"Contests_Show_More" = "Show more";
+"Contests_Show_Less" = "Show less";
+"Contests_Join_Now" = "Join now";
+"Contests_Points" = "points";
+"Contests_Not_Join" = "Not Join";
+"Contests_Not_Start" = "Not Start";
+"Contests_In_Progress" = "In Progress";
+"Contests_Finish" = "Finish";
+"Contests_Done" = "Done";
+"Contests_Cancel" = "Cancel";
+"Contests_No_Have" = "No contests";
+"Contests_Unable_Get_List" = "Unable to get list contest.";
+"Contests_Detail_Unable_Get_List" = "Unable to get contest detail";
+
+// MARK: - -------------------------------- Contests Detail --------------------------------
+"Challenges" = "Challenges";
+"Completed" = "Completed";
+"completed" = "Ok";
+"Join" = "Join";
+"Contest_Detail_days" = "days";
+"Contest_Detail_hours" = "hrs";
+"Contest_Detail_minutes" = "mins";
+"Contest_Detail_seconds" = "secs";
+"Contest_Detail_Join_Successfull" = "Joined Successfull";
+
+// MARK: - -------------------------------- Challenges Detail --------------------------------
+"Challenge_Information" = "Information";
+"Challenge_History" = "History";
+"Challenge_Description" = "Description";
+"Challenge_Start" = "Start";
+"Challenge_Stop" = "Stop";
+"Challenge_Go" = "Go!";
+"Challenge_Completed" = "Challenge goal has been achieved. Do you want to stop challenge?";
+
+// MARK: - -------------------------------- Reward --------------------------------
+"Reward_History" = "Reward History";
+"Reward_Total_Points" = "Total Edy reward";
+"Reward_Used" = "Used";
+"Reward_Remain" = "Remain";
+"Reward_Detail" = "Detail";
+"Reward_Completed_Date_Title" = "Completed date:";
+"Reward_Point_Title" = "Edy reward:";
+"Reward_Point_Unit" = "￥";
+
+// MARK: - -------------------------------- Notification --------------------------------
+"Notification_Tittle" = "Notification";
+"Notification_Input_Code_Tittle" = "Please input code to join program";
+"Notification_Invalid_Code" = "Invalid Code";
+
+// MARK: - -------------------------------- Content Feed --------------------------------
+"Content_Feed_Tittle" = "Content Feed";
+"Content_Feed_Advertisement" = "Advertisement";
+"Content_Error_Title" = "Content Feed Error";
+"Content_Write_Your_Comment" = "Write a comment...";
+"Content_Comment_Year" = "year ago";
+"Content_Comment_Month" = "month ago";
+"Content_Comment_Day" = "day ago";
+"Content_Comment_Hour" = "hour ago";
+"Content_Comment_Minute" = "min ago";
+"Content_Comment_Second" = "second ago";
+"Content_Comment_Years" = "years ago";
+"Content_Comment_Months" = "months ago";
+"Content_Comment_Days" = "days ago";
+"Content_Comment_Hours" = "hours ago";
+"Content_Comment_Minutes" = "mins ago";
+"Content_Comment_Seconds" = "seconds ago";
+"Content_Comment_Just_Now" = "Just now";
+
+// MARK: - -------------------------------- Challenge Detail --------------------------------
+"Challenge_Detail_Title" = "Challenge Detail";
+
+// MARK: - -------------------------------- Edit Profile --------------------------------
+"Edit_Profile_Tittle" = "Edit Profile";
+"male" = "Male";
+"female" = "Female";
+"nick_name" = "Nick name :";
+"email" = "Email :";
+"first_name" = "First Name :";
+"last_name" = "Last Name :";
+"health_check_result" = "Health examination results:";
+
+"liqid_title" = "Fat";
+"liver_title" = "Liver function";
+"blood_title" = "Blood sugar HbA1c";
+"urina_title" = "Urinary protein";
+"liqid_fat_neutral" = "Neutral Fat";
+"liqid_cholesterol_hdl" = "HDL";
+"liqid_cholesterol_ldl" = "LDL";
+"liqid_cholesterol_hdl_Long_String" = "HDL cholesterol";
+"liqid_cholesterol_ldl_Long_String" = "LDL cholesterol";
+"liver_got" = "GOT";
+"liver_gpt" = "GPT";
+"liver_vgt" = "v-GT";
+
+// MARK: - -------------------------------- Report Bug --------------------------------
+"Report_Bug_Title" = "Title";
+"Report_Bug_Problem" = "What is the problem?";
+"Report_Bug_Severity" = "Severity:";
+"Report_Bug_Low_Level" = "Low";
+"Report_Bug_Medium_Level" = "Medium";
+"Report_Bug_High_Level" = "High";
+"Report_Bug_Critical_Level" = "Critical";
+"Report_Bug_Problem_Description" = "Describe the issue in detail here...";
+"Report_Bug_Success" = "Sent Successfully";
+"Report_Bug_Fail" = "Failed to send";
+
+// MARK: - -------------------------------- Common --------------------------------
+"Title_Camera" = "Take a picture";
+"Title_Photo" = "Select photos";
+"Title_Popup" = "Please choose a picture…";
+"Title_Agree" = "Agree";
+"Title_Bar_Code" = "Scan barcode";
+"Title_GPS" = "Use GPS";
+"Title_Checking_Location" = "Location checking...";
+"DateFormatter" = "EEEE, MMM d, yyyy";
+"No_Network_Title" = "Network connection error";
+"No_User_Data" = "Data can not be acquired now. Please try again later.";
+// MARK: - -------------------------------- Keyboard --------------------------------
+"Keyboard.Button.Done" = "Ok";
+"Keyboard.Button.Cancel" = "Cancel";
+"Keyboard.Button.OK" = "Ok";
+"Keyboard.Button.Edit" = "Edit";
+"Keyboard.Button.NotAllow" = "Not allow";
+"Keyboard.Button.Add" = "Add";
+"Keyboard.Button.Delete" = "Delete";
+"Keyboard.Button.Later" = "Later";
+// MARK: -------------------------------- MESSAGE --------------------------------
+"Title_Send_Mail_Success" = "Send mail success";
+"Title_Change_Password_Success" = "Your password has been changed";
+"Title_Change_Password_Fail" = "There was an error setting the password. The password has not been changed";
+"Title_Chat_With_Watson" = "Chat with Watson";
+"Title_Message_Privacy" = "The advice functional will not work when you are not allowed to get information";
+
+// MARK: -------------------------------- TITLE POPUP --------------------------------
+"Title_Warning" = "Warning";
+"Title_Device_Profile_Popup" = "Please enter GOBE account.";
+
+// Error title
+"Error_Title" = "Error Message";
+"Input_Error_Title" = "Input error";
+"Login_Error_Title" = "Login error";
+"User_Info_Error_Title" = "User info error";
+"Update_User_Info_Error_Title" = "Update User info error";
+"Update_Error_Title" = "Update Error";
+"Change_Password_Error_Title" = "Change password error";
+"Term_of_use_Error_Title" = "Term of use";
+"Register_Error_Title" = "Register Error";
+"Gobe_Error_Title" = "Request GoBe Error";
+"Fitbit_Error_Title" = "Request Fitbit Error";
+"Contest_Error_Title" = "Get List Contest Error";
+"Reward_Error_Title" = "Get List Reward Error";
+"Shop_Error_Title" = "Get Shop Error";
+
+// Error message
+"Message_Title" = "Message";
+"Username_Length_Error_Message" = "Username must have at least 8 characters long";
+"Password_Blank_Error_Message" = "Please enter your password";
+"Dont_Check_TermsOfUse_Error_Message" = "You need to agree terms of use";
+"Dont_Check_TermsOfUse_Error_Message_02" = "You must agree term of use and policy";
+"Datetime_Error_Message" = "This is not a valid time";
+"Email_not_Valid_Error_Message" = "Please enter a valid email address";
+"Input_Length_not_Valid_Error_Message" = "Input value must be at least 8 characters and at most 255 long";
+"Input_Optional_Length_not_Valid_Error_Message" = "Input length must be at most 255 characters long";
+"Password_Confirm_Error_Message" = "New password and confirm new password do not match";
+"Input_Max_Length_Error_Message" = " Maximum length is 255";
+"Avatar_Max_Length_Error_Message" = " Maximum length is 1024";
+"Input_Empty_Error_Message" = "You cannot leave this field empty";
+"Input_Height_Error_Message" = "Please insert a valid height data";
+"Input_Weight_Error_Message" = "Please insert a valid weight data";
+
+"Reset_Password_Success_Message" = "Password reset successful";
+"Reset_Password_Fail_Message" = "Reset password fail";
+"Register_Successfull" = "Registration completed successfully";
+"Request_FitBit_Successfull" = "Requested FitBit successfully";
+"Request_Gobe_Successfull" = "Requested GOBE successfully";
+"Update_Successful_Message" = "Update successful";
+"Unknown_Error" = "Unknown Error";
+"Unknown" = "Unknown";
+
+// MARK: - -------------------------------- SpeechRecognition --------------------------------
+"Speech recognition" = "Speech recognition";
+"Done" = "Done";
+
+// MARK: - -------------------------------- FAQ --------------------------------
+"Title_Can_Not_Load_FAQ" = "Can't load FAQ";
+
+// MARK: - -------------------------------- Advice --------------------------------
+"Title_Advice_Today" = "Today";
+"Title_Advice_Yesterday" = "Yesterday";
+"Title_Advice_This_Week" = "This Week";
+"Title_Advice_Last_Week" = "Last Week";
+"Title_Advice_This_Month" = "This Month";
+"Title_Advice_Last_Month" = "Last Month";
+
+// MARK: - -------------------------------- Walking --------------------------------
+"Photo_Title" = "Photo";
+"Photo_Add_Success" = "Add Photo Successfull";
+"Photo_Add_Error" = "Can not add photo to album. Please try again.";
+"Photo_Delete_Message" = "Are you sure you want to delete this photo?";
+"No_Photo" = "No Photo";
+"Gallery" = "Gallery";
+"Walking_Challenge" = "Walking Challenge";
+"Walking_Stopped_Challenge" = "Stopped challenge";

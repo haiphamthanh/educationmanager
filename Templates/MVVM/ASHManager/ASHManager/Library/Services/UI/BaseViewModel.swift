@@ -11,20 +11,24 @@ import RxSwift
 class BaseViewModel {
 	// MARK: - ================================= Properties =================================
 	let disposeBag = DisposeBag()
+	let pDone = PublishSubject<Void>()
 	
-	private(set) var model: BaseModelProtocol?
-	private(set) var networkService: NetworkServiceProtocol?
+	private(set) var model: BaseModelProtocol
+	private(set) var network: NetworkServiceProtocol
+	private(set) var dataStore: DataStoreServiceProtocol
 	
-	private let pDialogMessage: PublishSubject<PageDialogMessage> = PublishSubject<PageDialogMessage>()
-	private let pDialogMessageVC: PublishSubject<PageDialogActionMessage<AbstractPopUpOutput>> = PublishSubject<PageDialogActionMessage<AbstractPopUpOutput>>()
-	private let pToastMessage: PublishSubject<String> = PublishSubject<String>()
-	private let pDataSource: BehaviorSubject<Any?> = BehaviorSubject<Any?>(value: nil)
+	private let pAlert = PublishSubject<AlertInput>()
+	private let pdidAlert = PublishSubject<Void>()
+	private let pToast = PublishSubject<String>()
+	private let pDataSource = BehaviorSubject<Any?>(value: nil)
 	
 	// MARK: - ================================= Init =================================
 	required init(model: BaseModelProtocol,
-				  networkService: NetworkServiceProtocol) {
+				  network: NetworkServiceProtocol,
+				  dataStore: DataStoreServiceProtocol) {
 		self.model = model
-		self.networkService = networkService
+		self.network = network
+		self.dataStore = dataStore
 	}
 	
 	// MARK: - ======================= Use for inherit in subclass =======================
@@ -83,6 +87,7 @@ class BaseViewModel {
 	}
 	
 	deinit {
+		pDone.onNext(())
 		print("\(self) is deinit")
 	}
 }
@@ -103,18 +108,19 @@ extension BaseViewModel {
 
 // MARK: - ================================= BaseViewModelProtocol =================================
 extension BaseViewModel: BaseViewModelProtocol {
+	var didAlert: AnyObserver<Void> {
+		return pdidAlert.asObserver()
+	}
+	
 	func loadMore() -> Observable<Void> {
 		return loadMoreData()
 	}
 	
-	var dialogMessage: Observable<PageDialogMessage> {
-		return pDialogMessage
+	var alert: Observable<AlertInput> {
+		return pAlert.asObserver()
 	}
-	var dialogMessageVC: Observable<PageDialogActionMessage<AbstractPopUpOutput>> {
-		return pDialogMessageVC
-	}
-	var toastMessage: Observable<String> {
-		return pToastMessage
+	var toast: Observable<String> {
+		return pToast
 	}
 	var dataSource: Observable<Any?> {
 		return pDataSource
@@ -124,10 +130,6 @@ extension BaseViewModel: BaseViewModelProtocol {
 		return reloadData()
 	}
 	
-	func reloadWhenViewWillAppear() {
-		
-	}
-	
 	func push(params: Dictionary<String, Any>?) {
 		initialize(params: params)
 		loadData()
@@ -135,42 +137,47 @@ extension BaseViewModel: BaseViewModelProtocol {
 	}
 }
 
+// MARK: - ================================= Outputs =================================
+extension BaseViewModel {
+	var didDone: Observable<Void> {
+		return pDone.asObservable()
+	}
+}
+
 // MARK: - ================================= Dialog && Toast =================================
 extension BaseViewModel {
-	func showDialog(error: Error, title: String? = nil, action: (() -> Void)? = nil) {
-		return showOKDialog(title: title, message: error.localizedDescription, action: action)
+	func showAlert(title: String? = nil, error: Error) -> Observable<Void> {
+		return showAlert(title: title, message: error.localizedDescription)
 	}
 	
-	func showOKDialog(title: String? = nil, message: String, action: (() -> Void)? = nil) {
-		let button = PageDialogButton(title: LocalizedString.localizedString(input: "OK"),
-									  action: action)
-		let messageDialog = PageDialogMessage(title: title,
-											  message: message,
-											  buttons: [button])
-		showDialog(message: messageDialog)
-	}
-	
-	func showActionDialog(title: String? = nil, message: String? = nil, vcType: PopUpViewControllerType, params: Dictionary<String, Any>?, action: ((AbstractPopUpOutput) -> ())? = nil) {
-		let messageDialog = PageDialogActionMessage(type: vcType,
-													params: params,
-													title: title,
-													message: message,
-													action: action)
-		showActionDialog(message: messageDialog)
+	func showAlert(title: String? = nil, message: String) -> Observable<Void> {
+		let alerInput = AlertInput(title: title, message: message)
+		return showAlertAdapter(alerInput)
 	}
 	
 	func showToast(message: String) {
-		pToastMessage.onNext(message)
+		pToast.onNext(message)
+	}
+}
+
+// MARK: - ================================= View - Outputs - Don't use directly =================================
+extension BaseViewModel {
+	func clone(with newtype: BaseViewModel.Type) -> BaseViewModelProtocol {
+		return newtype.init(model: model,
+							network: network,
+							dataStore: dataStore)
 	}
 }
 
 // MARK: - ================================= Private =================================
 private extension BaseViewModel {
-	private func showDialog(message: PageDialogMessage) {
-		pDialogMessage.onNext(message)
+	private func showAlertAdapter(_ input: AlertInput) -> Observable<Void> {
+		return showAlert(input)
+			.take(1)
 	}
 	
-	private func showActionDialog(message: PageDialogActionMessage<AbstractPopUpOutput>) {
-		pDialogMessageVC.onNext(message)
+	private func showAlert(_ input: AlertInput) -> Observable<Void> {
+		pAlert.onNext(input)
+		return pdidAlert
 	}
 }

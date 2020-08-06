@@ -11,18 +11,21 @@ import RxSwift
 ///// Need to implement for multiple source later
 ///// Only need one source for one screen currently
 protocol BaseViewModelProtocol: class {
-	// For first load
+	// MARK: View - Inputs
+	var didAlert: AnyObserver<Void> { get }
 	func push(params: Dictionary<String, Any>?)
-	
-	// Usage
-	var dialogMessage: Observable<PageDialogMessage> { get }
-	var dialogMessageVC: Observable<PageDialogActionMessage<AbstractPopUpOutput>> { get }
-	var toastMessage: Observable<String> { get }
-	var dataSource: Observable<Any?> { get } // TODO: Make Any confirm to BaseViewModelProtocol
-	
 	func reload() -> Observable<Void>
-	func reloadWhenViewWillAppear()
-	
-	func canLoadMore() -> Bool
 	func loadMore() -> Observable<Void>
+	
+	// MARK: Coordinator - Outputs
+	var didDone: Observable<Void> { get }
+	
+	// MARK: View - Outputs
+	var toast: Observable<String> { get }
+	var alert: Observable<AlertInput> { get }
+	var dataSource: Observable<Any?> { get } // TODO: Make Any confirm to BaseViewModelProtocol
+	func canLoadMore() -> Bool
+	
+	// MARK: View - Outputs - Don't use directly
+	func clone(with newtype: BaseViewModel.Type) -> BaseViewModelProtocol
 }

@@ -1,4 +1,4 @@
-# Genki_iOS
+# AngiangSchool_iOS
 
 ## How to setup build environment
 
@@ -10,7 +10,7 @@
 6. `open ASHManager.xcworkspace`
 
 
-# ===========Genki for iOS===========
+# ===========Structure for iOS===========
 
 ## Enviroment
 
@@ -42,7 +42,7 @@
 ```
 ASHManager
 |	Target
-│   ├── Genki
+│   ├── AngiangSchool
 │   │   ├── Domain
 │   │   │   ├── UseCases
 │   │   │   └── Entries

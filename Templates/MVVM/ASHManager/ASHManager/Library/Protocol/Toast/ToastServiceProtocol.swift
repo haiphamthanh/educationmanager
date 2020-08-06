@@ -21,11 +21,8 @@ enum ToastType {
 }
 
 protocol ToastServiceProtocol {
-	// MARK: - ================================= Init =================================
-	func use(navigationService: BasicNavigationServiceProtocol)
-	
 	// MARK: - ================================= Usage =================================
-	func toast(message: String)
-	func toast(message: String, type: ToastType)
-	func toast(message: String, type: ToastType, position: ToastPosition)
+	func show(message: String)
+	func show(message: String, type: ToastType)
+	func show(message: String, type: ToastType, position: ToastPosition)
 }

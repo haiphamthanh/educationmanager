@@ -9,30 +9,28 @@
 import Toast_Swift
 
 class BaseToastService {
-	private var navigationService: BasicNavigationServiceProtocol!
+	private let navigationService: BasicNavigationServiceProtocol
+	init(navigationService: BasicNavigationServiceProtocol) {
+		self.navigationService = navigationService
+	}
 }
 
 extension BaseToastService: ToastServiceProtocol {
-	// MARK: - ================================= Init =================================
-	func use(navigationService: BasicNavigationServiceProtocol) {
-		self.navigationService = navigationService
-	}
-	
 	// MARK: - ================================= Usage =================================
-	func toast(message: String) {
-		if let nav = self.navigationService?.topViewController?.navigationController {
+	func show(message: String) {
+		if let nav = self.navigationService.topViewController?.navigationController {
 			nav.view.makeToast(message)
 			return
 		}
 		
-		self.navigationService?.topViewController?.view.makeToast(message)
+		self.navigationService.topViewController?.view.makeToast(message)
 	}
 	
-	func toast(message: String, type: ToastType) {
+	func show(message: String, type: ToastType) {
 		// TODO: implement later
 	}
 	
-	func toast(message: String, type: ToastType, position: ToastPosition) {
+	func show(message: String, type: ToastType, position: ToastPosition) {
 		// TODO: implement later
 	}
 }

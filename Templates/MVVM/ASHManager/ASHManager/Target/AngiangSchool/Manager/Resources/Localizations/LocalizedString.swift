@@ -48,7 +48,6 @@ class LocalizedString: NSObject {
 	// MARK: - ================================= LocalizeTable.NORMAL =================================
 	static func titleHome() -> String { return "Title_Home".localized(using: LocalizeTable.NORMAL) }
 	static func localizedString(input: String) -> String { return input.localized(using: LocalizeTable.NORMAL) }
-	static func titleResetPass() -> String { return "Title_Reset_Pass".localized(using: LocalizeTable.NORMAL) }
 	static func titleCamera() -> String { return "Title_Camera".localized(using: LocalizeTable.NORMAL) }
 	static func titlePopup() -> String { return "Title_Popup".localized(using: LocalizeTable.NORMAL) }
 	
@@ -100,6 +99,7 @@ class LocalizedString: NSObject {
 	static func titleEmailAdress() -> String { return "Title_email_address".localized(using: LocalizeTable.LOGIN) }
 	static func titlePassword() -> String { return "Title_password".localized(using: LocalizeTable.LOGIN) }
 	static func titleChangePassword() -> String { return "Title_Change_Password".localized(using: LocalizeTable.LOGIN) }
+	static func titleResetPassword() -> String { return "Title_Reset_Password".localized(using: LocalizeTable.NORMAL) }
 	
 	// MARK: - ================================= LocalizeTable.FORGOT_PASSWORD =================================
 	static func titleSendEmail() -> String { return "Title_Send_Email".localized(using: LocalizeTable.FORGOT_PASSWORD) }

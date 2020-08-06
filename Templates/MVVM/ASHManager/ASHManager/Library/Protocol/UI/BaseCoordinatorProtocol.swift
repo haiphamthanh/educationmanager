@@ -11,5 +11,5 @@ import RxSwift
 protocol BaseCoordinatorProtocol {
 	func setup(coorBag: AdapterCoordinator)
 	func push(params: Dictionary<String, Any>?)
-	func start() -> Observable<Void>
+	func startProcess() -> Observable<Void>
 }

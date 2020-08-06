@@ -1,113 +1,131 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '10.0'
 
 workspace 'ASHManager'
 project 'ASHManager/ASHManager.xcodeproj'
 
-target 'ASHManager' do
+def shared_pods
 	# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 	use_frameworks!
 	
-	# Pods for ASHManager
-	# Localization
-	pod 'Localize-Swift', '~> 2.0'
-	# Logger
-	pod 'CocoaLumberjack/Swift'
+	# Pods for validator
+	pod 'Validator'
+	pod 'SwifterSwift' # –Over 500 in 1– for iOS, macOS, tvOS and watchOS
+	# Pods for font
+	pod 'FontAwesomeKit'
+	# Pods for animation
+	pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+	# Auto layout code
+	pod 'SnapKit'
+	
+	# Pods for presentation
 	# Color manager
 	pod 'UIColor_Hex_Swift'
 	# User defaults
 	pod 'SwiftyUserDefaults'
 	# Introduction
 	pod 'EAIntroView'
-	# UIPagecontrol
-	pod 'SMPageControl'
-	# keyboard
-	pod 'IQKeyboardManagerSwift', '~> 5.0.7'
-	# Indicator
-	pod 'NVActivityIndicatorView'
-	# Permission
-	pod 'PAPermissions'
-	# GoogleMaps
-	pod 'GoogleMaps'
-	# GooglePlaces
-	pod 'GooglePlaces'
-	# Message
-	pod 'JSQMessagesViewController'
-	
-	# Pods for presentation
-	# Menu
-	pod 'SlideMenuControllerSwift'
-	pod 'RAMAnimatedTabBarController’
+	# Side Menu
+	pod 'YALSideMenu'
+	# Searching
+	pod 'RAMReel'
 	# Photo
 	pod 'PreviewTransition'
-	pod 'ImageSlideshow'
+	# Circular Slider
+	pod 'HGCircularSlider'
 	# Toast
-	pod 'Toast-Swift', '~> 3.0.1'
+	pod 'Toast-Swift'
 	# Dialog
-	pod 'PopupDialog', '~> 0.6'
+	pod 'PopupDialog'
+	# Indicator
+	pod 'NVActivityIndicatorView'
+	# keyboard
+	pod 'IQKeyboardManagerSwift'
 	# Pull to refresh
-	pod 'ESPullToRefresh'
-	# Cell Customization
-	#	  pod 'FoldingCell'
-	# QR Code scanner
-	pod 'QRCodeReader.swift', '~> 8.0.3'
-	#ProgressBar
-	pod 'Charts', '~> 3.0.5'
-	pod 'XLPagerTabStrip', '~> 8.0'
-	pod 'MZTimerLabel'
-	#Pod Clock
+	pod 'ESPullToRefresh', :git => 'https://github.com/eggswift/pull-to-refresh.git', :branch => 'master'
+	# Fitness
+	pod 'Charts'
+	
+	# Pod for sub items
+	pod 'SelectableTextView'
+	pod 'LTMorphingLabel'
+	pod 'SkyFloatingLabelTextField'
 	
 	# Pods for Design pattern
 	# Dependency injection
-	pod 'Swinject', '~> 2.1.0'
-	# Reactive
-	pod 'RxSwift',    '~> 4.0'
-	pod 'RxCocoa',    '~> 4.0'
+	pod 'Swinject'
+	# Observer
+	pod 'RxSwift'
+	pod 'RxCocoa'
 	pod 'RxGesture'
 	
 	# Pods for Network
-	# Network checking
+	# Checking
 	pod 'ReachabilitySwift'
-	# HTTP networking
-	pod 'Alamofire', '~> 4.5'
-	# Network Abstration layer
+	# HTTP
+	pod 'Alamofire'
+	# Abstration layer
 	pod 'Moya'
 	pod 'Moya/RxSwift'
 	# Downloading and caching images
-	pod 'Kingfisher', '~> 4.0'
-	# Convert JSON data to object
+	pod 'Kingfisher'
+	
+	# Pods for Converter
+	# Deal with json
 	pod 'ObjectMapper'
-	# Convert html text
+	# Text to HTML format
 	pod 'SwiftSoup'
+	# Localization
+	pod 'Localize-Swift'
 	
 	# Pods for ORM (Object relational mapping)
 	pod 'RealmSwift'
 	pod 'RxRealm'
+	pod 'QueryKit'
+	
+	# Pods for Timing management
+	pod 'DateToolsSwift' # For parsing
+	pod 'Schedule' # For Plan
+	pod 'JTAppleCalendar' # Calendar
 	
 	# Pods for Social network
-	# Pods for Facebook
+	# Facebook
 	pod 'Bolts'
 	pod 'FBSDKCoreKit'
 	pod 'FBSDKLoginKit'
 	pod 'FBSDKShareKit'
-	# Pods for Twitter
+	# Twitter
 	pod 'TwitterKit'
-	# Pods for Google
-	pod 'GoogleSignIn', '~> 4.1'
-	# Pods for IAP
+	# Google
+	pod 'GoogleSignIn'
+	pod 'GooglePlaces'
+	pod 'GoogleMaps'
+	
+	# Pods for In App Purchase
 	pod 'SwiftyStoreKit'
 	
-	target 'ASHManagerTests' do
-		inherit! :search_paths
-		# Pods for testing
-		#	  pod 'Quick'
-		#	  pod 'Nimble'
-	end
-	
-	target 'ASHManagerUITests' do
-		inherit! :search_paths
-		# Pods for testing
-		#	  pod 'Quick'
-		#	  pod 'Nimble'
-	end
+	# Pods for Logger
+	pod 'CocoaLumberjack/Swift'
 end
+
+target "ASEducation" do
+	shared_pods
+end
+
+target "ASEducationDev" do
+	shared_pods
+end
+
+#target 'ASHManagerTests' do
+#	inherit! :search_paths
+#	# Pods for testing
+#	#	  pod 'Quick'
+#	#	  pod 'Nimble'
+#end
+#
+#target 'ASHManagerUITests' do
+#	inherit! :search_paths
+#	# Pods for testing
+#	#	  pod 'Quick'
+#	#	  pod 'Nimble'
+#end

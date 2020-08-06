@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Angiang Education</string>
+	<string>EduAnGiang</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -25,23 +25,8 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>genki</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.295507837305-mnt4b6tmce2okhjln7rirc8chrlm7s45</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb2031108973585641</string>
+				<string>com.googleusercontent.apps.267441227971-7dhqnakn43pgn6dsvp1qbi0975l4dp08</string>
+				<string>fb587198468366265</string>
 				<string>twitterkit-0T7gqmJSkXUwx8beqbXCIp518</string>
 			</array>
 		</dict>
@@ -49,11 +34,14 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>2031108973585641</string>
+	<string>587198468366265</string>
 	<key>FacebookDisplayName</key>
 	<string>Angiang Education</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>fbshareextension</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbapi</string>
 		<string>fbauth2</string>
 		<string>google</string>
 		<string>twitter</string>
@@ -117,21 +105,6 @@
 	<string>Send media message</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Use for Siri</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>MEIRYO_0.TTC</string>
-		<string>meiryob.ttc</string>
-		<string>OpenSans-Bold.ttf</string>
-		<string>OpenSans-BoldItalic.ttf</string>
-		<string>OpenSans-ExtraBold.ttf</string>
-		<string>OpenSans-ExtraBoldItalic.tff</string>
-		<string>OpenSans-Italic.ttf</string>
-		<string>OpenSans-Light.ttf</string>
-		<string>OpenSans-LightItalic.ttf</string>
-		<string>OpenSans-Regular.tff</string>
-		<string>OpenSans-Semibold.ttf</string>
-		<string>OpenSans-SemiboldItalic.ttf</string>
-	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchApp</string>
 	<key>UIMainStoryboardFile</key>
